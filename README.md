@@ -6,6 +6,15 @@ It replaces a manual routine: opening each stock on a watchlist, checking the sa
 
 > A ranking for deciding what to research next, not investment advice.
 
+## Runs on its own
+
+- **Every US trading day, automatically.** A scheduled Claude run refreshes everything at 6:47 AM IST (Tuesday to Saturday), after the US market close.
+- **Corrects its own picks.** Each run re-checks the 3 picks and swaps one out if it falls below its 200-DMA or fails the P/E check. A fresh top 3 is chosen at the start of every month.
+- **No manual steps on a normal day.** Membership, prices, scores, notes, the track record and your (private) dashboard all update without you. You only step in to change the checklist, the universe or the schedule.
+- **What it needs:** the computer that runs the schedule switched on with the Claude desktop app open, because the data is collected through its browser. If a run can't reach the browser or the data, it skips publishing and says why instead of posting partial data.
+
+The public dashboard link is a frozen snapshot of the first run (Nov 9, 2026). Claude can only update a dashboard that isn't public, so the daily runs publish to a private one.
+
 ## The seven checks
 
 | Check | Pass rule |
@@ -53,7 +62,7 @@ The browser scripts run as JavaScript inside a `finance.yahoo.com` (or Wikipedia
 | `scoring/merge_compact.py` | Adds the screened-out stocks, with the reason each one failed |
 | `dashboard/index.html` | The dashboard page (runs inside a Claude Data artifact) |
 | `dashboard/preview.html` | A standalone preview of the dashboard using the sample data |
-| `agent/refresh_prompt.md` | The instructions a scheduled Claude run follows to refresh everything |
+| `agent/refresh_prompt.md` | The instructions the daily scheduled Claude run follows to refresh everything |
 | `data/sample/` | A full run from Nov 9, 2026 (inputs and outputs) |
 | `docs/overview.md` | One-page overview: why, what and how |
 
