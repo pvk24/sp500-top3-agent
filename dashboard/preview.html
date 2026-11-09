@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Standalone preview of index.html outside Claude's dashboard runtime.
+     Serve the repo root (python3 -m http.server) and open /dashboard/preview.html.
+     It loads the sample data in data/sample/ and stands in for the runtime's dash API. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&amp;P 500 Top 3 Opportunities (preview)</title>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+:root { --font-anthropic-sans: system-ui, -apple-system, Segoe UI, sans-serif; --font-anthropic-serif: Georgia, serif;
+  --color-fg: #1f1e1d; --color-fg-muted: #6b6a68; --color-bg: #faf9f5; --color-panel: #ffffff; --color-border-line: #e6e3da;
+  --color-ok: #2f7d4f; --color-warn: #b7791f; --color-bad: #b4413c; --cds-chart-grid: #ebe8e0; --cds-chart-axis: #8a877f;
+  --cds-text-secondary: #6b6a68; --cds-surface-popover: #fff; --cds-border: #ddd; --cds-shadow-popover: 0 2px 8px rgba(0,0,0,.12);
+  --cds-radius: 8px; --cds-pad-md: 12px; --cds-pad-lg: 18px; --cds-gap-sm: 8px; --cds-gap-md: 12px;
+  --cds-font-size-caption: 13px; --cds-font-size-heading: 20px; --cds-font-weight-medium: 600;
+  --cds-dur-slow: .4s; --cds-ease-out: ease-out; }
+body { background: var(--color-bg); margin: 0; padding: 32px; }
+</style></head><body><div id="root">Loading…</div>
+<script>
+(async () => {
+  const base = '../data/sample/';
+  const files = {scores: 'scores.json', prices: 'prices.json', track: 'track.json', backtest: 'backtest.json', backtestSummary: 'backtest_summary.json'};
+  const data = {};
+  for (const [k, f] of Object.entries(files)) {
+    try { data[k] = {status: 'ok', data: await (await fetch(base + f)).json()}; } catch (e) { data[k] = {status: 'error', data: []}; }
+  }
+  const draws = {}; let params = {};
+  window.dash = {
+    data: (id) => data[id] || {status: 'error', data: []},
+    draw: (name, f) => { draws[name] = f; },
+    params: () => params,
+    setParams: (p) => { params = {...params, ...p}; render(); },
+    colors: ['#c96442', '#3b6ea8', '#6b6a68'],
+  };
+  const html = await (await fetch('index.html')).text();
+  const [markup, rest] = html.split('<script>');
+  const root = document.getElementById('root'); root.innerHTML = markup;
+  new Function(rest.split('</script>')[0])();
+  function render() {
+    for (const [n, f] of Object.entries(draws)) for (const el of document.querySelectorAll(`[data-draw="${n}"]`)) {
+      if (typeof f === 'function') f(el); else f.update(el, f.mount(el));
+    }
+  }
+  render();
+})();
+</script></body></html>

@@ -1,0 +1,423 @@
+<meta name="dash-one-writer">
+<style>
+.wl { font-family: var(--font-anthropic-sans); color: var(--color-fg); display: flex; flex-direction: column; gap: 28px; max-width: 1180px; }
+.wl h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 34px; line-height: 1.15; margin: 0; }
+.wl h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0 0 4px; }
+.wl .eyebrow { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); letter-spacing: .06em; text-transform: uppercase; margin: 0 0 6px; }
+.wl .lead { font-size: 17px; line-height: 1.5; margin: 10px 0 0; max-width: 68ch; }
+.wl .lead b { font-weight: var(--cds-font-weight-medium); }
+.wl .muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.wl .sub { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 0 0 12px; max-width: 75ch; line-height: 1.5; }
+.wl .funnel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.wl .stage { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: 10px 12px; position: relative; overflow: hidden; }
+.wl .stage .n { font-family: var(--font-anthropic-serif); font-size: 26px; font-variant-numeric: tabular-nums; }
+.wl .stage .l { font-size: 12px; color: var(--color-fg-muted); line-height: 1.3; }
+.wl .stage .b { position: absolute; left: 0; bottom: 0; height: 3px; }
+@media (max-width: 560px) { .wl .funnel { grid-template-columns: repeat(2, 1fr); } }
+.wl .picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 18px; }
+.wl .pick { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: calc(var(--cds-radius) * 1.5); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden; }
+.wl .pick::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--accent, var(--color-ok)); }
+.wl .head { display: flex; align-items: center; gap: 12px; }
+.wl .rank { flex: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-anthropic-serif); font-size: 18px; border: 1px solid var(--color-border-line); }
+.wl .who { flex: 1; min-width: 0; }
+.wl .sym { font-size: 20px; font-weight: var(--cds-font-weight-medium); line-height: 1.1; }
+.wl .nm { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wl .ring { flex: none; position: relative; width: 58px; height: 58px; }
+.wl .ring svg { width: 58px; height: 58px; transform: rotate(-90deg); }
+.wl .ring span { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-anthropic-serif); font-size: 20px; font-variant-numeric: tabular-nums; }
+.wl .row2 { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.wl .pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); border: 1px solid currentColor; white-space: nowrap; width: max-content; }
+.wl .pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.wl .sig-buy { color: var(--color-ok); } .wl .sig-wait { color: var(--color-warn); } .wl .sig-avoid { color: var(--color-bad); } .wl .sig-watch { color: var(--color-fg-muted); }
+.wl .checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(62px, 1fr)); gap: 4px; }
+.wl .chk { font-size: 11px; text-align: center; padding: 5px 2px; border-radius: 6px; border: 1px solid var(--color-border-line); line-height: 1.25; }
+.wl .chk b { display: block; font-size: 13px; }
+.wl .chk.pass { color: var(--color-ok); border-color: color-mix(in srgb, var(--color-ok) 45%, transparent); }
+.wl .chk.fail { color: var(--color-bad); border-color: color-mix(in srgb, var(--color-bad) 45%, transparent); }
+.wl .chk.na { color: var(--color-fg-muted); }
+.wl .price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.wl .price .v { font-family: var(--font-anthropic-serif); font-size: 26px; font-variant-numeric: tabular-nums; }
+.wl .pos { color: var(--color-ok); } .wl .neg { color: var(--color-bad); }
+.wl .spark { position: relative; height: 70px; }
+.wl .spark svg { display: block; width: 100%; height: 70px; }
+.wl .tip { position: absolute; top: -6px; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: 6px; padding: 3px 7px; font-size: var(--cds-font-size-caption); white-space: nowrap; z-index: 2; }
+.wl .gauge .row { display: flex; justify-content: space-between; font-size: var(--cds-font-size-caption); margin-bottom: 5px; }
+.wl .gauge .row b { font-weight: var(--cds-font-weight-medium); font-variant-numeric: tabular-nums; }
+.wl .track { position: relative; height: 8px; border-radius: 4px; background: var(--cds-chart-grid); }
+.wl .zone { position: absolute; top: 0; bottom: 0; opacity: .28; }
+.wl .zone.lo { left: 0; width: 30%; background: var(--color-ok); border-radius: 4px 0 0 4px; }
+.wl .zone.hi { right: 0; width: 35%; background: var(--color-warn); border-radius: 0 4px 4px 0; }
+.wl .fill { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 4px; opacity: .35; }
+.wl .mark { position: absolute; top: -4px; width: 4px; height: 16px; border-radius: 2px; background: var(--color-fg); transform: translateX(-2px); }
+.wl .ends { display: flex; justify-content: space-between; color: var(--color-fg-muted); font-size: 11px; margin-top: 4px; font-variant-numeric: tabular-nums; gap: 8px; }
+.wl .factors { display: grid; grid-template-columns: auto 1fr auto; gap: 6px 10px; align-items: center; font-size: var(--cds-font-size-caption); }
+.wl .factors .bar { height: 6px; border-radius: 3px; background: var(--cds-chart-grid); overflow: hidden; }
+.wl .factors .bar i { display: block; height: 100%; border-radius: 3px; }
+.wl .factors .n { font-variant-numeric: tabular-nums; text-align: right; min-width: 2ch; }
+.wl .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.wl .stat { border-top: 1px solid var(--color-border-line); padding-top: 8px; }
+.wl .stat .k { color: var(--color-fg-muted); font-size: 11px; }
+.wl .stat .v { font-variant-numeric: tabular-nums; font-weight: var(--cds-font-weight-medium); }
+.wl .why { margin: 0; font-size: 13px; line-height: 1.5; }
+.wl details.brief { border-top: 1px solid var(--color-border-line); padding-top: 10px; }
+.wl details.brief summary { cursor: pointer; font-size: 13px; font-weight: var(--cds-font-weight-medium); }
+.wl details.brief dl { margin: 10px 0 0; display: grid; gap: 8px; font-size: 13px; line-height: 1.45; }
+.wl details.brief dt { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--color-fg-muted); }
+.wl details.brief dd { margin: 0; }
+.wl .health { font-size: 12px; }
+.wl details.more { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); }
+.wl details.more summary { cursor: pointer; font-weight: var(--cds-font-weight-medium); }
+.wl details.more[open] summary { margin-bottom: var(--cds-gap-md); }
+.wl .scroll { overflow-x: auto; }
+.wl table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+.wl th, .wl td { padding: 7px 8px; border-bottom: 1px solid var(--color-border-line); text-align: right; white-space: nowrap; }
+.wl th { color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); }
+.wl th:nth-child(-n+2), .wl td:nth-child(-n+2) { text-align: left; }
+.wl td.c, .wl th.c { text-align: center; }
+.wl .wrap td { white-space: normal; }
+.wl .news td { white-space: normal; text-align: left; }
+.wl .news td:last-child { text-align: right; white-space: nowrap; }
+.wl .news a { color: inherit; }
+.wl .filter { display: flex; gap: var(--cds-gap-sm); align-items: center; margin-bottom: var(--cds-gap-sm); flex-wrap: wrap; }
+.wl .chart { position: relative; min-height: 280px; }
+.wl .chart text { font-size: 11px; fill: var(--cds-text-secondary); }
+.wl .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; margin-bottom: 6px; }
+.wl .legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+.wl .note { border-left: 3px solid var(--color-warn); padding: 8px 12px; font-size: 13px; line-height: 1.5; background: color-mix(in srgb, var(--color-warn) 8%, transparent); border-radius: 0 6px 6px 0; }
+.wl .method { margin: 0; padding-left: 18px; line-height: 1.6; font-size: var(--cds-font-size-caption); }
+.wl .method li { margin-bottom: 6px; } .wl .method ul { padding-left: 18px; margin: 4px 0 0; }
+[data-dash-source-state=refreshing] { opacity: .5; }
+@media (prefers-reduced-motion: no-preference) { .wl .pick { animation: wl-in var(--cds-dur-slow) var(--cds-ease-out) both; } @keyframes wl-in { from { opacity: 0; transform: translateY(6px); } } }
+</style>
+
+<div class="wl">
+  <header id="summary">
+    <p class="eyebrow">S&amp;P 500 screener · updated <span data-draw="asof" data-source="scores" data-field="asOf" data-row="0">—</span></p>
+    <h1>Top 3 S&amp;P 500 opportunities this month</h1>
+    <p class="lead">Picks for <span data-draw="month" data-source="scores">—</span>: <b data-draw="pickList" data-source="scores">—</b>. Every S&amp;P 500 stock is run through your seven checks: 200-DMA, earnings, RSI, momentum, P/E, PEG and Sharpe ratio. These three pass all seven and score highest. Each pick is held for the month and re-checked daily.</p>
+  </header>
+
+  <section id="funnel" aria-label="How the picks were narrowed down">
+    <div class="funnel" data-draw="funnel" data-source="scores"></div>
+  </section>
+
+  <section id="picks" aria-label="Top 3 opportunities">
+    <div class="picks" data-draw="picks" data-source="scores prices" style="min-height: 520px"></div>
+  </section>
+
+  <p class="muted">Picks are held for the month and re-checked every day; a pick is only replaced early if it falls below its 200-DMA or fails the P/E check. A ranking to decide what to research next, not investment advice.</p>
+
+  <section id="track-record">
+    <h2>Live track record</h2>
+    <p class="sub">Every pick since tracking began on Nov 9, 2026, measured against SPY (the S&amp;P 500 ETF) over the same days. This is the honest test of whether the ranking works.</p>
+    <div class="scroll">
+      <table data-source="track" data-row-key="pickedOn,symbol">
+        <thead><tr><th data-field="symbol">Symbol</th><th data-field="pickedOn">Picked</th><th data-field="entryPrice">Entry</th><th data-field="lastPrice">Latest</th>
+          <th data-field="returnPct">Return %</th><th data-field="benchReturnPct">SPY %</th><th data-field="excessPct">vs SPY</th><th data-field="status">Status</th></tr></thead>
+        <tbody data-draw="track"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="backtest">
+    <h2>Backtest: would these rules have worked?</h2>
+    <p class="sub">Growth of $1 from Nov 2023, picking the top 3 each month using the 200-DMA, RSI and momentum checks only. Historical P/E, PEG, earnings dates and analyst data weren't available, so those checks aren't in the test.</p>
+    <div class="legend" data-draw="btLegend" data-source="backtest"></div>
+    <div class="chart" data-draw="btChart" data-source="backtest"></div>
+    <div class="note" id="bias">Read this with caution: it tests <b>today's</b> S&amp;P 500 members, and several of the strategy's picks (AppLovin, Palantir, Dell, Super Micro, Coinbase, Robinhood) only joined the index after they had already soared, so the strategy's lead is overstated. The more reliable lesson is about risk: the strategy's worst fall (−32%) was nearly twice the equal-weight basket's (−18%), and its lead swung widely from month to month. On this universe, reshuffling weekly made more (+255% against +163%) but fell further at its worst (−38%).</div>
+    <div class="scroll" style="margin-top: 12px">
+      <table data-source="backtestSummary" data-row-key="variant">
+        <thead><tr><th data-field="variant">Variant tested</th><th></th><th data-field="total">3-year return %</th><th data-field="maxDD">Worst fall %</th></tr></thead>
+        <tbody data-draw="btTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <details class="more" id="shortlist">
+    <summary>The shortlist: stocks that passed the first six checks</summary>
+    <div class="scroll">
+      <table data-source="scores" data-row-key="symbol" class="wrap">
+        <thead><tr><th data-field="rank">#</th><th data-field="symbol">Stock</th><th data-field="score">Score</th>
+          <th class="c" data-field="chk200">200-DMA</th><th class="c" data-field="chkEarnings">Earnings</th><th class="c" data-field="chkRsi">RSI</th><th class="c" data-field="chkMomentum">Momentum</th><th class="c" data-field="chkPE">P/E</th><th class="c" data-field="chkPEG">PEG</th><th class="c" data-field="chkSharpe">Sharpe</th>
+          <th data-field="signal">Signal</th><th data-field="note" style="text-align:left">Why</th></tr></thead>
+        <tbody data-draw="shortlist"></tbody>
+      </table>
+    </div>
+  </details>
+
+  <details class="more" id="all">
+    <summary>All S&amp;P 500 stocks</summary>
+    <div class="filter"><label class="muted" for="stageSel">Show</label><select id="stageSel" class="dash-select" data-draw="stagePick" data-source="scores" aria-label="Filter by screening stage"></select></div>
+    <div class="scroll">
+      <table data-source="scores" data-row-key="symbol" class="wrap">
+        <thead><tr><th data-field="rank">#</th><th data-field="symbol">Stock</th><th data-field="score">Score</th><th data-field="stage">Stage</th>
+          <th data-field="rsi14">RSI</th><th data-field="vsSma200">vs 200-DMA %</th><th data-field="return3m">3m %</th><th data-field="pe">Fwd P/E</th><th data-field="peg">PEG</th><th data-field="sharpe">Sharpe</th><th data-field="note" style="text-align:left">Why</th></tr></thead>
+        <tbody data-draw="all"></tbody>
+      </table>
+    </div>
+  </details>
+
+  <details class="more" id="method">
+    <summary>How the ranking works</summary>
+    <ul class="method">
+      <li><b>Universe</b>: every current S&amp;P 500 member, fetched from Wikipedia's list of S&amp;P 500 companies on each run. Alphabet is counted once, as GOOG (Class C). Stocks with under a year of trading history are skipped because the checks need 200 days of prices.</li>
+      <li><b>Your seven checks</b>:
+        <ul>
+          <li><b>200-DMA</b>: price above its 200-day average.</li>
+          <li><b>Earnings</b>: no earnings report in the next 14 days.</li>
+          <li><b>RSI</b>: 14-day RSI between 30 and 65, or below 30 and rising (the bounce has started).</li>
+          <li><b>Momentum</b>: positive 3-month return, or a positive 12-month trend with price back above its 20-day average.</li>
+          <li><b>P/E</b>: forward P/E above 0 (profitable) and at most 40.</li>
+          <li><b>PEG</b>: forward P/E divided by expected EPS growth to next year (in %) is at most 2.0. Growth is measured from this year's EPS, or the last 12 months' if this year's is negative. If neither is positive, PEG can't be computed and the check fails.</li>
+          <li><b>Sharpe ratio</b>: 1-year Sharpe of at least 0.5, meaning annualised return above a 4% risk-free rate divided by annualised volatility, over the last 252 trading days.</li>
+        </ul></li>
+      <li><b>Stage 1, all stocks</b>: six checks run on all ~500 stocks (everything except earnings). Stocks that pass all six and aren't overbought or still falling go to the shortlist, up to 15.</li>
+      <li><b>Stage 2, shortlist</b>: adds the earnings check and analyst data (target price, EPS estimate revisions, ratings), which are too slow to pull for every stock daily.</li>
+      <li><b>Score</b> (0–100): 30% trend vs the 200-DMA, 30% momentum (3-month and 12-month), 15% entry timing (cooler RSI and discount to the 52-week high), 15% valuation (lower P/E and PEG score higher), 10% analyst outlook. Trend, momentum and entry are scaled by each stock's volatility, so a 10% move in a calm stock counts more than in a wild one. Analyst upside is capped at 30%, or 15% when the price has fallen faster than analysts have cut their targets.</li>
+      <li><b>Signals</b>: <i>Trend buy</i> means above the 50- and 200-day averages with RSI 45–70. <i>Buy the dip</i> means a pullback (RSI under 40 or 15%+ off the high) in an uptrend where the bounce has started. <i>Wait: still falling</i> is the same pullback before the bounce. <i>Wait: stretched</i> means RSI above 70. <i>Wait: earnings soon</i> means a report within 14 days. <i>Avoid: downtrend</i> means 3%+ below the 200-DMA and falling over 3 months.</li>
+      <li><b>Top 3 and holding period</b>: the highest scores that pass all seven checks, locked on the first run of each month. Daily runs re-check them, and a pick is replaced early only if it falls below its 200-DMA or fails the P/E check. Monthly holding came from the Nasdaq-100 backtest, where weekly reshuffling lost returns to whipsaw. On the S&amp;P 500 backtest weekly reshuffling made more but had a deeper worst fall, so the monthly hold is kept.</li>
+      <li><b>Track record</b>: every pick is logged with its entry price and compared with SPY over the same days. It starts on Nov 9, 2026 and is the real test of whether the ranking works.</li>
+      <li><b>Backtest</b>: covers only the 200-DMA, RSI and momentum checks, on today's S&amp;P 500 members from Nov 2023. Using today's members flatters the result, as the note under the chart explains.</li>
+      <li><b>Data and refresh</b>: membership from Wikipedia's S&amp;P 500 list; prices, P/E, EPS estimates and analyst data from Yahoo Finance; US closing prices cross-checked against Alpha Vantage. News is no longer used. The dashboard refreshes Tuesday to Saturday at 6:47 AM IST, after the US close, and needs your computer on with the Claude desktop app open. Notes and briefs are written by Claude from these numbers.</li>
+    </ul>
+  </details>
+</div>
+
+<script>
+window.WL = {
+  sigClass: (s) => s === 'Buy the dip' || s === 'Trend buy' ? 'sig-buy' : /^Wait/.test(s) ? 'sig-wait' : /^Avoid/.test(s) ? 'sig-avoid' : 'sig-watch',
+  sigColor: (s) => s === 'Buy the dip' || s === 'Trend buy' ? 'var(--color-ok)' : /^Wait/.test(s) ? 'var(--color-warn)' : /^Avoid/.test(s) ? 'var(--color-bad)' : 'var(--color-fg-muted)',
+  fmt: (v, d = 1) => v == null || v === '' ? '–' : (+v).toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d}),
+  sgn: (v, d = 1) => v == null || v === '' ? '–' : (+v > 0 ? '+' : '') + WL.fmt(v, d),
+  el: (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; },
+  mark: (e, field, sym, src = 'scores') => { e.dataset.source = src; e.dataset.field = field; e.dataset.where = 'symbol=' + encodeURIComponent(sym); return e; },
+  ok: (id) => dash.data(id).status === 'ok' && dash.data(id).data.length > 0,
+  picks: () => dash.data('scores').data.filter((r) => r.pick != null && r.pick !== '').sort((a, b) => a.pick - b.pick),
+  CHECKS: [['chk200', '200-DMA'], ['chkEarnings', 'Earnings'], ['chkRsi', 'RSI'], ['chkMomentum', 'Momentum'], ['chkPE', 'P/E'], ['chkPEG', 'PEG'], ['chkSharpe', 'Sharpe']],
+  chip: (r, f, label) => { const v = r[f]; const c = WL.el('div', 'chk ' + (v === 'pass' ? 'pass' : v === 'fail' ? 'fail' : 'na'));
+    c.append(WL.el('b', null, v === 'pass' ? '✓' : v === 'fail' ? '✗' : '–'), document.createTextNode(label)); WL.mark(c, f, r.symbol); return c; },
+};
+
+dash.draw('asof', (el) => { el.textContent = WL.ok('scores') ? dash.data('scores').data[0].asOf : '—'; });
+dash.draw('month', (el) => { el.textContent = WL.ok('scores') ? d3.utcFormat('%B %Y')(new Date(dash.data('scores').data[0].asOf)) : '—'; });
+dash.draw('pickList', (el) => { el.textContent = WL.ok('scores') ? WL.picks().map((r) => `${r.symbol} (${r.name})`).join(', ') : '—'; });
+
+dash.draw('funnel', (el) => {
+  el.replaceChildren();
+  if (!WL.ok('scores')) { el.textContent = '—'; return; }
+  const d = dash.data('scores').data, tot = d.length;
+  const stages = [[tot, 'S&P 500 stocks screened'], [d.filter((r) => r.stage !== 'Screened out').length, 'passed the price, valuation and Sharpe checks'],
+    [d.filter((r) => r.stage === 'Shortlist').length, 'shortlisted for the earnings check and analyst review'], [WL.picks().length, 'picks for the month']];
+  for (const [n, l] of stages) {
+    const s = WL.el('div', 'stage'); const b = WL.el('div', 'b'); b.style.width = (100 * n / tot) + '%'; b.style.background = dash.colors[0];
+    s.append(WL.el('div', 'n', String(n)), WL.el('div', 'l', l), b); el.append(s);
+  }
+});
+
+dash.draw('picks', (root) => {
+  root.replaceChildren();
+  if (!WL.ok('scores')) { root.textContent = dash.data('scores').status === 'error' ? 'Failed to load' : '—'; return; }
+  const prices = WL.ok('prices') ? d3.group(dash.data('prices').data, (d) => d.symbol) : new Map();
+  const picks = WL.picks();
+  if (!picks.length) { root.append(WL.el('p', 'muted', 'No stock passes all seven checks today.')); return; }
+  for (const r of picks) {
+    const S = r.symbol, accent = WL.sigColor(r.signal);
+    const card = WL.el('article', 'pick'); card.id = 'pick-' + S; card.style.setProperty('--accent', accent);
+
+    const head = WL.el('div', 'head');
+    const rank = WL.el('div', 'rank', String(r.pick)); rank.setAttribute('aria-label', 'Pick ' + r.pick);
+    const who = WL.el('div', 'who'); who.append(WL.mark(WL.el('div', 'sym', S), 'symbol', S), WL.mark(WL.el('div', 'nm', r.name), 'name', S));
+    const ring = WL.el('div', 'ring'); const C = 2 * Math.PI * 24;
+    const svg = d3.select(ring).append('svg').attr('viewBox', '0 0 58 58').attr('role', 'img').attr('aria-label', `Score ${r.score} out of 100`);
+    svg.append('circle').attr('cx', 29).attr('cy', 29).attr('r', 24).attr('fill', 'none').style('stroke', 'var(--cds-chart-grid)').attr('stroke-width', 5);
+    svg.append('circle').attr('cx', 29).attr('cy', 29).attr('r', 24).attr('fill', 'none').style('stroke', accent).attr('stroke-width', 5).attr('stroke-linecap', 'round').attr('stroke-dasharray', `${C * r.score / 100} ${C}`);
+    ring.append(WL.mark(WL.el('span', null, String(r.score)), 'score', S));
+    head.append(rank, who, ring);
+
+    const r2 = WL.el('div', 'row2');
+    r2.append(WL.mark(WL.el('span', 'pill ' + WL.sigClass(r.signal), r.signal), 'signal', S));
+    const h = WL.mark(WL.el('span', 'health ' + (r.health === 'On track' ? 'pos' : 'neg'), r.health || ''), 'health', S); r2.append(h);
+    if (r.pickedOn) { const p = WL.el('span', 'muted', 'picked '); p.append(WL.mark(WL.el('span', null, r.pickedOn), 'pickedOn', S)); r2.append(p); }
+
+    const checks = WL.el('div', 'checks'); checks.id = 'checks-' + S; checks.setAttribute('aria-label', `${r.checksPassed} of 7 checks passed`);
+    for (const [f, l] of WL.CHECKS) checks.append(WL.chip(r, f, l));
+
+    const price = WL.el('div', 'price');
+    price.append(WL.mark(WL.el('span', 'v', WL.fmt(r.price, 2)), 'price', S), WL.el('span', 'muted', r.currency));
+    const ch = WL.el('span', r.change1d > 0 ? 'pos' : r.change1d < 0 ? 'neg' : '');
+    ch.append(WL.mark(WL.el('span', null, WL.sgn(r.change1d, 2) + '%'), 'change1d', S), document.createTextNode(' today'));
+    price.append(ch);
+
+    const pts = (prices.get(S) || []).map((d) => ({x: +d.point, y: +d.close}));
+    const sp = WL.el('div', 'spark'); sp.dataset.source = 'prices';
+    card.append(head, r2, checks, price, sp);
+
+    const g1 = WL.el('div', 'gauge'); g1.id = 'rsi-' + S;
+    const row1 = WL.el('div', 'row'); const lbl = r.rsi14 > 65 ? 'hot' : r.rsi14 <= 30 ? 'oversold' : r.rsi14 > r.rsi5dAgo ? 'rising' : 'cooling';
+    const rl = WL.el('span'); rl.append(document.createTextNode('RSI 14 · '), WL.mark(WL.el('b', null, WL.fmt(r.rsi14, 1)), 'rsi14', S), document.createTextNode(' ' + lbl));
+    const r5 = WL.el('span', 'muted', '5 days ago '); r5.append(WL.mark(WL.el('span', null, WL.fmt(r.rsi5dAgo, 1)), 'rsi5dAgo', S));
+    row1.append(rl, r5);
+    const t1 = WL.el('div', 'track'); t1.setAttribute('role', 'img'); t1.setAttribute('aria-label', `RSI ${WL.fmt(r.rsi14, 0)} on a 0 to 100 scale; your range is 30 to 65`);
+    const m1 = WL.el('div', 'mark'); m1.style.left = Math.max(0, Math.min(100, r.rsi14)) + '%';
+    t1.append(WL.el('div', 'zone lo'), WL.el('div', 'zone hi'), m1);
+    const e1 = WL.el('div', 'ends'); e1.append(WL.el('span', null, 'oversold <30'), WL.el('span', null, 'your range 30–65'), WL.el('span', null, '>65 hot'));
+    g1.append(row1, t1, e1);
+
+    const g2 = WL.el('div', 'gauge'); g2.id = 'range-' + S;
+    const pos = r.high52w > r.low52w ? (r.price - r.low52w) / (r.high52w - r.low52w) * 100 : 100;
+    const row2 = WL.el('div', 'row'); const rl2 = WL.el('span');
+    rl2.append(document.createTextNode('52-week range · '), WL.mark(WL.el('b', null, WL.sgn(r.offHigh52w, 1) + '%'), 'offHigh52w', S), document.createTextNode(' from high'));
+    row2.append(rl2);
+    const t2 = WL.el('div', 'track'); t2.setAttribute('role', 'img'); t2.setAttribute('aria-label', `Price sits ${WL.fmt(pos, 0)}% of the way from the 52-week low to the high`);
+    const f2 = WL.el('div', 'fill'); f2.style.width = Math.max(0, Math.min(100, pos)) + '%'; f2.style.background = dash.colors[0];
+    const m2 = WL.el('div', 'mark'); m2.style.left = Math.max(0, Math.min(100, pos)) + '%';
+    t2.append(f2, m2);
+    const lo = WL.el('span', null, 'Low '); lo.append(WL.mark(WL.el('span', null, WL.fmt(r.low52w, 2)), 'low52w', S));
+    const hi = WL.el('span', null, 'High '); hi.append(WL.mark(WL.el('span', null, WL.fmt(r.high52w, 2)), 'high52w', S));
+    const e2 = WL.el('div', 'ends'); e2.append(lo, hi); g2.append(row2, t2, e2);
+
+    const fx = WL.el('div', 'factors'); fx.id = 'factors-' + S;
+    for (const [k, label] of [['trend', 'Trend (200-DMA)'], ['momentum', 'Momentum'], ['entry', 'Entry (RSI, 52w)'], ['valuation', 'Valuation (P/E, PEG)'], ['outlook', 'Analysts']]) {
+      const v = r[k]; const bar = WL.el('div', 'bar'); const i = WL.el('i');
+      if (v != null) { i.style.width = v + '%'; i.style.background = dash.colors[0]; } bar.append(i); bar.setAttribute('aria-hidden', 'true');
+      fx.append(WL.el('span', 'muted', label), bar, WL.mark(WL.el('span', 'n', v == null ? 'n/a' : String(v)), k, S));
+    }
+
+    const st = WL.el('div', 'stats');
+    const stat = (k, v, field, cls) => { const d = WL.el('div', 'stat'); d.append(WL.el('div', 'k', k), WL.mark(WL.el('div', 'v ' + (cls || ''), v), field, S)); return d; };
+    st.append(stat('Forward P/E', WL.fmt(r.pe, 1), 'pe'), stat('PEG', WL.fmt(r.peg, 2), 'peg'), stat('1-yr Sharpe', WL.fmt(r.sharpe, 2), 'sharpe'),
+      stat('200-DMA', WL.fmt(r.sma200, 2), 'sma200'), stat('50-DMA', WL.fmt(r.sma50, 2), 'sma50'),
+      r.nextEarnings && r.daysToEarnings != null ? stat('Next earnings', d3.utcFormat('%b %-d')(new Date(r.nextEarnings)), 'nextEarnings') : stat('3-month', WL.sgn(r.return3m, 1) + '%', 'return3m', r.return3m >= 0 ? 'pos' : 'neg'),
+      stat('Analyst target', r.targetUpside == null ? '–' : WL.sgn(r.targetUpside, 1) + '%', 'targetUpside', r.targetUpside >= 0 ? 'pos' : 'neg'),
+      stat('EPS est. 90d', r.epsRevision90d == null ? '–' : WL.sgn(r.epsRevision90d, 1) + '%', 'epsRevision90d', r.epsRevision90d >= 0 ? 'pos' : 'neg'),
+      stat('Volatility (60d)', WL.fmt(r.volatility, 0) + '%', 'volatility'));
+
+    const why = WL.mark(WL.el('p', 'why', r.note || ''), 'note', S);
+    const br = WL.el('details', 'brief'); br.id = 'brief-' + S; br.append(WL.el('summary', null, 'One-page brief'));
+    const dl = WL.el('dl');
+    for (const [k, l] of [['bull', 'Bull case'], ['bear', 'Bear case'], ['catalyst', 'Catalysts to watch']]) if (r[k]) dl.append(WL.el('dt', null, l), WL.mark(WL.el('dd', null, r[k]), k, S));
+    br.append(dl);
+    card.append(g1, g2, fx, st, why, br);
+    root.append(card);
+
+    if (pts.length > 1) {
+      const W = Math.max(200, sp.clientWidth), H = 70, m = 3;
+      const x = d3.scaleLinear().domain(d3.extent(pts, (d) => d.x)).range([m, W - m]);
+      const y = d3.scaleLinear().domain(d3.extent(pts, (d) => d.y)).range([H - m, m + 4]);
+      const s = d3.select(sp).append('svg').attr('viewBox', `0 0 ${W} ${H}`).attr('preserveAspectRatio', 'none').attr('role', 'img').attr('aria-label', `${S} price over the last 12 months, ${WL.sgn(r.return12m, 1)}%`);
+      s.append('path').datum(pts).attr('d', d3.area().x((d) => x(d.x)).y0(H).y1((d) => y(d.y))).style('fill', dash.colors[0]).style('fill-opacity', 0.1);
+      s.append('path').datum(pts).attr('d', d3.line().x((d) => x(d.x)).y((d) => y(d.y))).attr('fill', 'none').style('stroke', dash.colors[0]).attr('stroke-width', 1.8);
+      const last = pts[pts.length - 1]; s.append('circle').attr('cx', x(last.x)).attr('cy', y(last.y)).attr('r', 3).style('fill', dash.colors[0]);
+      const dot = s.append('circle').attr('r', 3.5).style('fill', 'var(--color-bg)').style('stroke', dash.colors[0]).attr('stroke-width', 2).style('display', 'none');
+      const tip = WL.el('div', 'tip'); tip.hidden = true; sp.append(tip);
+      s.on('pointermove', (ev) => {
+        const [mx] = d3.pointer(ev); const p = pts[d3.bisector((d) => x(d.x)).center(pts, mx)];
+        dot.style('display', null).attr('cx', x(p.x)).attr('cy', y(p.y));
+        tip.hidden = false; tip.textContent = `${p.x === 0 ? 'Latest' : '~' + Math.round(-p.x) + ' wk ago'} · ${WL.fmt(p.y, 2)}`;
+        const px = x(p.x) * sp.clientWidth / W; tip.style.left = Math.max(0, Math.min(px - 50, sp.clientWidth - 130)) + 'px';
+      }).on('pointerleave', () => { dot.style('display', 'none'); tip.hidden = true; });
+      const cap = WL.el('div', 'ends'); cap.append(WL.el('span', null, '12 months ago'), WL.el('span', null, WL.sgn(r.return12m, 1) + '% · now'));
+      sp.after(cap);
+    }
+  }
+});
+
+dash.draw('track', (tb) => {
+  tb.replaceChildren();
+  if (!WL.ok('track')) return;
+  for (const t of dash.data('track').data) {
+    const tr = document.createElement('tr'); tr.dataset.key = encodeURIComponent(t.pickedOn) + ',' + encodeURIComponent(t.symbol);
+    const pc = (v) => WL.el('td', +v > 0 ? 'pos' : +v < 0 ? 'neg' : '', WL.sgn(+v, 2));
+    tr.append(WL.el('td', null, t.symbol), WL.el('td', null, t.pickedOn), WL.el('td', null, WL.fmt(t.entryPrice, 2)), WL.el('td', null, WL.fmt(t.lastPrice, 2)),
+      pc(t.returnPct), pc(t.benchReturnPct), pc(t.excessPct), WL.el('td', null, t.status));
+    tb.append(tr);
+  }
+});
+
+dash.draw('btLegend', (el) => {
+  el.replaceChildren();
+  [['Top-3 checklist strategy', 0], ['Equal-weight S&P 500 (today\'s members)', 1], ['SPY', 2]].forEach(([l, i]) => {
+    const s = WL.el('span'); const k = WL.el('i'); k.style.background = dash.colors[i]; s.append(k, document.createTextNode(l)); el.append(s); });
+});
+
+dash.draw('btChart', {
+  mount: (el) => { el.replaceChildren(); return {}; },
+  update: (el) => {
+    el.replaceChildren();
+    if (!WL.ok('backtest')) { el.textContent = dash.data('backtest').status === 'error' ? 'Failed to load' : '—'; return; }
+    const d = dash.data('backtest').data.map((r) => ({date: new Date(r.date), s: +r.strategy, w: +r.watchlist, q: +r.spy, picks: r.picks}));
+    const W = Math.max(300, el.clientWidth), H = 280, M = {t: 10, r: 46, b: 26, l: 40};
+    const x = d3.scaleUtc().domain(d3.extent(d, (r) => r.date)).range([M.l, W - M.r]);
+    const y = d3.scaleLinear().domain([0.8, d3.max(d, (r) => Math.max(r.s, r.w, r.q)) * 1.05]).nice().range([H - M.b, M.t]);
+    const svg = d3.select(el).append('svg').attr('viewBox', `0 0 ${W} ${H}`).attr('width', '100%').attr('role', 'img')
+      .attr('aria-label', `Growth of one dollar from ${d3.utcFormat('%b %Y')(d[0].date)}: strategy ${WL.fmt(d.at(-1).s, 2)}, equal-weight ${WL.fmt(d.at(-1).w, 2)}, SPY ${WL.fmt(d.at(-1).q, 2)}`);
+    svg.append('g').selectAll('line').data(y.ticks(5)).join('line').attr('x1', M.l).attr('x2', W - M.r).attr('y1', y).attr('y2', y).style('stroke', 'var(--cds-chart-grid)');
+    svg.append('g').selectAll('text').data(y.ticks(5)).join('text').attr('x', M.l - 6).attr('y', (v) => y(v) + 4).attr('text-anchor', 'end').text((v) => '$' + v);
+    const xt = x.ticks(W < 500 ? 3 : 6);
+    svg.append('g').selectAll('text').data(xt).join('text').attr('x', x).attr('y', H - 6).attr('text-anchor', 'middle').text(d3.utcFormat('%b %Y'));
+    const series = [['s', 0], ['w', 1], ['q', 2]];
+    for (const [k, i] of series) {
+      svg.append('path').datum(d).attr('fill', 'none').style('stroke', dash.colors[i]).attr('stroke-width', k === 's' ? 2.4 : 1.6).attr('d', d3.line().x((r) => x(r.date)).y((r) => y(r[k])));
+      svg.append('text').attr('x', W - M.r + 4).attr('y', y(d.at(-1)[k]) + 4).style('fill', dash.colors[i]).text('$' + WL.fmt(d.at(-1)[k], 2));
+    }
+    const guide = svg.append('line').attr('y1', M.t).attr('y2', H - M.b).style('stroke', 'var(--cds-chart-axis)').style('display', 'none');
+    const tip = WL.el('div', 'tip'); tip.hidden = true; tip.style.whiteSpace = 'normal'; tip.style.maxWidth = '220px'; el.append(tip);
+    svg.on('pointermove', (ev) => {
+      const [mx] = d3.pointer(ev); const r = d[d3.bisector((q) => x(q.date)).center(d, mx * W / el.clientWidth)];
+      guide.style('display', null).attr('x1', x(r.date)).attr('x2', x(r.date));
+      tip.hidden = false;
+      tip.textContent = `${d3.utcFormat('%b %-d, %Y')(r.date)} · strategy $${WL.fmt(r.s, 2)} · equal-weight $${WL.fmt(r.w, 2)} · SPY $${WL.fmt(r.q, 2)}${r.picks ? ' · held into this date: ' + r.picks : ''}`;
+      const px = x(r.date) * el.clientWidth / W; tip.style.left = Math.max(0, Math.min(px + 10, el.clientWidth - 230)) + 'px'; tip.style.top = '20px';
+    }).on('pointerleave', () => { guide.style('display', 'none'); tip.hidden = true; });
+  },
+});
+
+dash.draw('btTable', (tb) => {
+  tb.replaceChildren();
+  if (!WL.ok('backtestSummary')) return;
+  const rows = dash.data('backtestSummary').data, mx = d3.max(rows, (r) => +r.total);
+  for (const r of rows) {
+    const tr = document.createElement('tr');
+    const name = WL.el('td', null, r.variant); if (r.current === true || r.current === 'true') name.style.fontWeight = '600';
+    const bar = WL.el('td'); const b = WL.el('div'); b.style.height = '6px'; b.style.borderRadius = '3px'; b.style.width = Math.max(4, 120 * r.total / mx) + 'px'; b.style.background = dash.colors[0]; bar.append(b);
+    tr.append(name, bar, WL.el('td', 'pos', WL.sgn(+r.total, 0)), WL.el('td', 'neg', WL.fmt(+r.maxDD, 0)));
+    tb.append(tr);
+  }
+});
+
+dash.draw('shortlist', (tb) => {
+  tb.replaceChildren();
+  if (!WL.ok('scores')) return;
+  for (const r of dash.data('scores').data.filter((r) => r.stage === 'Shortlist')) {
+    const tr = document.createElement('tr'); tr.dataset.key = encodeURIComponent(r.symbol);
+    const nm = WL.el('td'); nm.append(WL.el('b', null, r.symbol), WL.el('div', 'muted', r.name));
+    tr.append(WL.el('td', null, String(r.rank)), nm, WL.el('td', null, String(r.score)));
+    for (const [f] of WL.CHECKS) tr.append(WL.el('td', 'c ' + (r[f] === 'pass' ? 'pos' : r[f] === 'fail' ? 'neg' : 'muted'), r[f] === 'pass' ? '✓' : r[f] === 'fail' ? '✗' : '–'));
+    const sig = WL.el('td'); sig.append(WL.el('span', 'pill ' + WL.sigClass(r.signal), r.pick ? `Pick ${r.pick}` : r.signal));
+    const why = WL.el('td', null, r.note); why.style.minWidth = '260px'; why.style.textAlign = 'left';
+    tr.append(sig, why); tb.append(tr);
+  }
+});
+
+dash.draw('stagePick', (sel) => {
+  const opts = [['', 'All stocks'], ['Shortlist', 'Shortlist'], ['Passed price checks, outside top 15', 'Passed, outside top 15'], ['Screened out', 'Screened out']];
+  sel.replaceChildren(...opts.map(([v, l]) => new Option(l, v)));
+  sel.value = dash.params().stage ?? '';
+  sel.onchange = () => dash.setParams({stage: sel.value || null});
+});
+
+dash.draw('all', (tb) => {
+  tb.replaceChildren();
+  if (!WL.ok('scores')) return;
+  const f = dash.params().stage;
+  for (const r of dash.data('scores').data.filter((r) => !f || r.stage === f)) {
+    const tr = document.createElement('tr');
+    const pc = (v) => WL.el('td', v > 0 ? 'pos' : v < 0 ? 'neg' : '', WL.sgn(v, 1));
+    const why = WL.el('td', null, r.note); why.style.minWidth = '240px'; why.style.textAlign = 'left';
+    tr.append(WL.el('td', null, String(r.rank)), WL.el('td', null, r.symbol), WL.el('td', null, String(r.score)), WL.el('td', null, r.pick ? 'Pick ' + r.pick : r.stage),
+      WL.el('td', null, WL.fmt(r.rsi14, 1)), pc(r.vsSma200), pc(r.return3m), WL.el('td', null, WL.fmt(r.pe, 1)), WL.el('td', null, WL.fmt(r.peg, 2)), WL.el('td', null, WL.fmt(r.sharpe, 2)), why);
+    tb.append(tr);
+  }
+});
+
+</script>

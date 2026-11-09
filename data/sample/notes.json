@@ -1,0 +1,56 @@
+{
+ "BIIB": {
+  "note": "Closed at a new 52-week high after a 27% rise in 3 months, yet still only 16x forward earnings with a PEG of 0.54 and a 1-year Sharpe of 1.51.",
+  "bull": "Earnings are expected to grow about 30% next year (EPS 12.53 to 16.26), which is why the PEG is so low, and gains over the past year have come with only moderate swings (31% annualised volatility).",
+  "bear": "It is sitting at its 52-week high and the average analyst target is only 3% above today's price. Next-year EPS estimates slipped 2% over 90 days, with revisions split 12 up and 12 down.",
+  "catalyst": "Reported Oct 28; the next report is not yet scheduled. Watch for estimate revisions turning positive."
+ },
+ "HUM": {
+  "note": "Up 17% in 3 months and 74% in a year, at a new 52-week high after reporting on Nov 6. EPS is forecast to nearly double next year, which gives the lowest PEG on the shortlist (0.29) despite a 25x forward P/E.",
+  "bull": "Analysts are moving one way: 7 upward EPS revisions and none down in 30 days, next-year estimates up 4% in 90 days, and an average target 8% above today's price.",
+  "bear": "The low PEG depends on EPS recovering from 9.24 to about 17.19, which rests on Medicare Advantage margins. The stock has more than doubled from its 52-week low of 164, so a disappointment could hit hard.",
+  "catalyst": "Medicare Advantage open enrollment runs to Dec 7; enrollment and 2027 guidance updates follow."
+ },
+ "MET": {
+  "note": "Within 1% of its 52-week high, up 6% in 3 months, and the cheapest of the three picks at 9.2x forward earnings with a PEG of 1.0.",
+  "bull": "Low volatility (24% annualised) with a 1-year Sharpe of 1.21. Analysts raised next-year estimates 7 times and cut once in 30 days, and the average target is 6% above today's price.",
+  "bear": "Expected EPS growth is modest at about 9%, so this is a steady compounder rather than a fast grower. Insurers are sensitive to interest rates and credit markets.",
+  "catalyst": "Reported Nov 4; the next report is expected in early February."
+ },
+ "ABBV": {
+  "note": "Passes all seven checks and sits just below the top 3 on score (75). Up 18% in 3 months and close to its 52-week high, at 18x forward earnings."
+ },
+ "EG": {
+  "note": "Passes all seven checks with the cheapest valuation on the shortlist (6.8x forward P/E, PEG 0.55), but analysts are lukewarm and it ranks just below the top 3."
+ },
+ "AMD": {
+  "note": "Passes all seven checks and has the strongest analyst outlook on the shortlist (target 30% above price, EPS estimates up 15% in 90 days), but its 78% volatility lowers its trend and momentum scores."
+ },
+ "MRK": {
+  "note": "Passes all seven checks with a PEG of 0.07 (EPS expected to more than triple next year), but analysts cut next-year estimates 17 times and raised none in 30 days."
+ },
+ "KDP": {
+  "note": "Passes all seven checks; up 26% in 3 months at 14.5x forward earnings, but ranks below the top 3 on score."
+ },
+ "V": {
+  "note": "Passes all seven checks with 20 upward EPS revisions in 30 days, but at 25x forward earnings and a PEG of 1.8 it scores lower on valuation."
+ },
+ "STT": {
+  "note": "Passes all seven checks at 11x forward earnings, but it is 8% below its 3-month-ago price, which holds back its momentum score."
+ },
+ "SWKS": {
+  "note": "Passes all seven checks with a PEG of 0.34, but analysts are cautious (average rating close to hold) and the target sits below today's price."
+ },
+ "EBAY": {
+  "note": "Passes all seven checks, up 15% in 3 months with 21 upward EPS revisions in 30 days, but trades near its 52-week high with a PEG of 1.8."
+ },
+ "IFF": {
+  "note": "Passes all seven checks after a 10% drop this week, but RSI is still falling, so there is no sign of a bounce yet."
+ },
+ "DVA": {
+  "note": "Passes all seven checks and is cheap (11x forward P/E), but only 7 analysts cover it and estimates were cut 3 times in 30 days."
+ },
+ "FDS": {
+  "note": "Passes all seven checks, but the average analyst target is 12% below today's price, which drags down its outlook score."
+ }
+}
