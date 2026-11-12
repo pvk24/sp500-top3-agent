@@ -26,7 +26,7 @@ S = requests.Session(); S.headers.update(UA)
 errs = []
 
 
-def log(*a):
+def say(*a):
     print(dt.datetime.now(dt.timezone.utc).strftime('%H:%M:%S'), *a, flush=True)
 
 
@@ -290,9 +290,9 @@ def main():
     lock = state.get('lock') or {}
     month = today[:7]
 
-    log('fetching membership')
+    say('fetching membership')
     mem = members()
-    log('members', len(mem))
+    say('members', len(mem))
     if len(mem) < 490: raise SystemExit(f'Only {len(mem)} S&P 500 members found; stopping without publishing.')
     names = dict(mem)
     open(os.path.join(WORK, 'members.txt'), 'w').write(';'.join(f'{s}|{n}' for s, n in mem))
@@ -311,14 +311,14 @@ def main():
         except Exception as e:
             errs.append(f'{s}: {e}')
         n_done += 1
-        if n_done % 25 == 0: log('charts', n_done, 'ok', len(out), 'errors', len(errs), errs[-1] if errs else '')
+        if n_done % 25 == 0: say('charts', n_done, 'ok', len(out), 'errors', len(errs), errs[-1] if errs else '')
         if n_done == 12 and len(out) == 0: raise SystemExit(f'First 12 price requests all failed; stopping. Errors: {errs[:3]}')
         time.sleep(0.05)
     if spy_close is None: raise SystemExit(f'No {BENCH} price; stopping without publishing.')
     if len(out) < 450: raise SystemExit(f'Price data for only {len(out)} stocks; stopping without publishing. Errors: {errs[:5]}')
-    log('getting crumb')
+    say('getting crumb')
     cr = crumb()
-    log('valuation')
+    say('valuation')
     syms = list(out)
     valuation(out, syms, cr)
     compact, full = screen(out, syms)
@@ -336,7 +336,7 @@ def main():
     with open(os.path.join(WORK, 'compact.csv'), 'w', newline='') as fh:
         w = csv.writer(fh); w.writerow(['s', 'score', 'rsi', 'vs200', 'r3m', 'pe', 'peg', 'sharpe', 'checks', 'sig']); w.writerows(compact)
 
-    log('screened', len(compact), 'passed six', len(full), 'errors', len(errs))
+    say('screened', len(compact), 'passed six', len(full), 'errors', len(errs))
     ol = {}
     for s in short:
         try: ol[s] = outlook(s, cr)
@@ -344,7 +344,7 @@ def main():
         time.sleep(0.2)
     json.dump(ol, open(os.path.join(WORK, 'outlook.json'), 'w'))
 
-    log('outlook done', len(ol), '; scoring')
+    say('outlook done', len(ol), '; scoring')
     py, sc = sys.executable, os.path.join(ROOT, 'scoring')
     asof = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     subprocess.run([py, f'{sc}/build_raw.py', f'{WORK}/members.txt', f'{WORK}/full.csv', f'{WORK}/outlook.json', f'{WORK}/raw.json', asof], check=True)
@@ -379,7 +379,7 @@ def main():
                       'benchReturnPct': round(b_, 2), 'excessPct': round(r_ - b_, 2), 'asOf': today, 'status': 'Closed' if e.get('closedOn') else 'Open'})
 
     # backtest
-    log('backtest')
+    say('backtest')
     try:
         bt, bts = backtest(adj, sorted(adj[BENCH]))
     except Exception as e:
