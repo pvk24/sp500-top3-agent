@@ -10,6 +10,7 @@ State (the monthly lock and the pick log) is kept in data/live/state.json betwee
 """
 import csv, datetime as dt, html.parser, json, math, os, re, subprocess, sys, time
 import requests
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LIVE = os.path.join(ROOT, 'data', 'live')
@@ -22,7 +23,11 @@ BT_START = '2023-11-01'
 UA = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
       'Accept': 'application/json,text/plain,*/*', 'Accept-Language': 'en-US,en;q=0.9'}
 
-S = requests.Session(); S.headers.update(UA)
+try:  # Yahoo refuses plain scripted requests from data centres; curl_cffi presents as a real Chrome browser
+    from curl_cffi import requests as cr_requests
+    S = cr_requests.Session(impersonate='chrome')
+except ImportError:
+    S = requests.Session(); S.headers.update(UA)
 errs = []
 
 
@@ -34,7 +39,9 @@ def get(url, tries=3, as_json=True):
     for k in range(tries):
         try:
             r = S.get(url, timeout=15)
-            if r.status_code == 429 or r.status_code >= 500:
+            if r.status_code == 429:
+                time.sleep(5 * (k + 1)); raise RuntimeError('HTTP 429')
+            if r.status_code >= 500:
                 raise RuntimeError(f'HTTP {r.status_code}')
             r.raise_for_status()
             return r.json() if as_json else r.text
@@ -131,9 +138,13 @@ def stage1_row(sym, closes, price):
     return row, spark
 
 
+def warm_up():
+    for u in ('https://fc.yahoo.com', 'https://finance.yahoo.com/quote/MSFT/'):
+        try: S.get(u, timeout=20)
+        except Exception: pass
+
+
 def crumb():
-    try: S.get('https://fc.yahoo.com', timeout=20)
-    except Exception: pass
     return get('https://query1.finance.yahoo.com/v1/test/getcrumb', as_json=False).strip()
 
 
@@ -141,7 +152,7 @@ def valuation(out, syms, cr):
     for i in range(0, len(syms), 50):
         try:
             j = get('https://query2.finance.yahoo.com/v7/finance/quote?symbols=' + ','.join(syms[i:i + 50]) +
-                    '&fields=forwardPE,epsForward,epsCurrentYear,epsTrailingTwelveMonths&crumb=' + requests.utils.quote(cr))
+                    '&fields=forwardPE,epsForward,epsCurrentYear,epsTrailingTwelveMonths&crumb=' + quote(cr))
             for q in j['quoteResponse']['result']:
                 if q['symbol'] in out:
                     out[q['symbol']].update(fwdPE=R(q.get('forwardPE')), epsFwd=R(q.get('epsForward')),
@@ -181,7 +192,7 @@ def screen(out, syms):
 
 # ---------- stage 2 (same fields as browser/stage2.js) ----------
 def outlook(sym, cr):
-    j = get(f'https://query2.finance.yahoo.com/v10/finance/quoteSummary/{sym}?modules=financialData,earningsTrend,defaultKeyStatistics,calendarEvents&crumb=' + requests.utils.quote(cr))
+    j = get(f'https://query2.finance.yahoo.com/v10/finance/quoteSummary/{sym}?modules=financialData,earningsTrend,defaultKeyStatistics,calendarEvents&crumb=' + quote(cr))
     Q = j['quoteSummary']['result'][0]
     rw = lambda x: x.get('raw') if isinstance(x, dict) else None
     f = Q.get('financialData', {}); ny = next((t for t in Q.get('earningsTrend', {}).get('trend', []) if t.get('period') == '+1y'), {})
@@ -290,6 +301,8 @@ def main():
     lock = state.get('lock') or {}
     month = today[:7]
 
+    say('warming up Yahoo session')
+    warm_up()
     say('fetching membership')
     mem = members()
     say('members', len(mem))
