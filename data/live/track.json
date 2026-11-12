@@ -1,0 +1,47 @@
+[
+ {
+  "month": "2026-11",
+  "pickedOn": "2026-11-09",
+  "symbol": "BIIB",
+  "pick": 1,
+  "entryPrice": 259.4,
+  "benchmark": "SPY",
+  "benchEntry": 752.36,
+  "lastPrice": 253.4,
+  "returnPct": -2.31,
+  "benchReturnPct": 0.99,
+  "excessPct": -3.3,
+  "asOf": "2026-11-12",
+  "status": "Open"
+ },
+ {
+  "month": "2026-11",
+  "pickedOn": "2026-11-09",
+  "symbol": "HUM",
+  "pick": 2,
+  "entryPrice": 436.49,
+  "benchmark": "SPY",
+  "benchEntry": 752.36,
+  "lastPrice": 446.31,
+  "returnPct": 2.25,
+  "benchReturnPct": 0.99,
+  "excessPct": 1.26,
+  "asOf": "2026-11-12",
+  "status": "Open"
+ },
+ {
+  "month": "2026-11",
+  "pickedOn": "2026-11-09",
+  "symbol": "MET",
+  "pick": 3,
+  "entryPrice": 102.81,
+  "benchmark": "SPY",
+  "benchEntry": 752.36,
+  "lastPrice": 102.94,
+  "returnPct": 0.13,
+  "benchReturnPct": 0.99,
+  "excessPct": -0.86,
+  "asOf": "2026-11-12",
+  "status": "Open"
+ }
+]

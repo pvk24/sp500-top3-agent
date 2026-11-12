@@ -1,0 +1,33 @@
+{
+ "asOf": "2026-11-12",
+ "finishedAt": "2026-11-12T10:25:50Z",
+ "members": 502,
+ "scored": 499,
+ "passedSix": 21,
+ "shortlist": [
+  "BIIB",
+  "MET",
+  "ABBV",
+  "HUM",
+  "AMD",
+  "MRK",
+  "EBAY",
+  "STT",
+  "DAL",
+  "TXN",
+  "CSX",
+  "PFG",
+  "BNY",
+  "ADI",
+  "DE"
+ ],
+ "picks": [
+  "BIIB",
+  "HUM",
+  "MET"
+ ],
+ "replaced": [],
+ "spyClose": 759.81,
+ "backtest": true,
+ "errors": []
+}

@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11",
+ "asOf": "2026-11-12",
  "universe": "S&P 500",
  "benchmark": "SPY",
  "checks": [
@@ -55,16 +55,16 @@
   "MET",
   "ABBV",
   "HUM",
-  "MRK",
   "AMD",
+  "MRK",
   "EBAY",
   "STT",
+  "DAL",
   "TXN",
-  "PFG",
   "CSX",
+  "PFG",
   "BNY",
   "ADI",
-  "WAB",
   "DE"
  ]
 }
