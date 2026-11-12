@@ -95,7 +95,7 @@
     <p class="eyebrow">S&amp;P 500 screener · updated <span data-draw="asof" data-source="scores" data-field="asOf" data-row="0">—</span></p>
     <h1>Top 3 S&amp;P 500 opportunities this month</h1>
     <p class="lead">Picks for <span data-draw="month" data-source="scores">—</span>: <b data-draw="pickList" data-source="scores">—</b>. Every S&amp;P 500 stock is run through your seven checks: 200-DMA, earnings, RSI, momentum, P/E, PEG and Sharpe ratio. These three pass all seven and score highest.</p>
-    <p class="sub" style="margin-top: 10px">Runs on its own every US trading day at 6:47 AM IST. Each run re-checks the picks and swaps one out if it breaks the 200-DMA or P/E check, and a fresh top 3 is chosen each month. No manual steps on a normal day. A research ranking for deciding what to study next, not investment advice.</p>
+    <p class="sub" style="margin-top: 10px">Runs on its own every US trading day, from 9:47 AM IST or as soon as the laptop is on after that. Each run re-checks the picks and swaps one out if it breaks the 200-DMA or P/E check, and a fresh top 3 is chosen each month. No manual steps on a normal day. A research ranking for deciding what to study next, not investment advice.</p>
   </header>
 
   <section id="funnel" aria-label="How the picks were narrowed down">
@@ -125,10 +125,10 @@
     <p class="sub">Growth of $1 from Nov 2023, picking the top 3 each month using the 200-DMA, RSI and momentum checks only. Historical P/E, PEG, earnings dates and analyst data weren't available, so those checks aren't in the test.</p>
     <div class="legend" data-draw="btLegend" data-source="backtest"></div>
     <div class="chart" data-draw="btChart" data-source="backtest"></div>
-    <div class="note" id="bias">Read this with caution: it tests <b>today's</b> S&amp;P 500 members, and several of the strategy's picks (AppLovin, Palantir, Dell, Super Micro, Coinbase, Robinhood) only joined the index after they had already soared, so the strategy's lead is overstated. The more reliable lesson is about risk: the strategy's worst fall (−32%) was nearly twice the equal-weight basket's (−18%), and its lead swung widely from month to month. On this universe, reshuffling weekly made more (+255% against +163%) but fell further at its worst (−38%).</div>
+    <div class="note" id="bias">Read this with caution: it tests <b>today's</b> S&amp;P 500 members, and several of the strategy's picks (AppLovin, Palantir, Dell, Super Micro, Coinbase, Robinhood) only joined the index after they had already soared, so the strategy's lead is overstated. The more reliable lesson is about risk: compare the worst-fall column, where the strategy's drop has been far deeper than the equal-weight basket's, and its lead swings widely from month to month. The backtest is re-run with each daily refresh, so these figures move as new days are added.</div>
     <div class="scroll" style="margin-top: 12px">
       <table data-source="backtestSummary" data-row-key="variant">
-        <thead><tr><th data-field="variant">Variant tested</th><th></th><th data-field="total">3-year return %</th><th data-field="maxDD">Worst fall %</th></tr></thead>
+        <thead><tr><th data-field="variant">Variant tested</th><th></th><th data-field="total">Return since Nov 2023 %</th><th data-field="maxDD">Worst fall %</th></tr></thead>
         <tbody data-draw="btTable"></tbody>
       </table>
     </div>
@@ -170,16 +170,16 @@
           <li><b>Momentum</b>: positive 3-month return, or a positive 12-month trend with price back above its 20-day average.</li>
           <li><b>P/E</b>: forward P/E above 0 (profitable) and at most 40.</li>
           <li><b>PEG</b>: forward P/E divided by expected EPS growth to next year (in %) is at most 2.0. Growth is measured from this year's EPS, or the last 12 months' if this year's is negative. If neither is positive, PEG can't be computed and the check fails.</li>
-          <li><b>Sharpe ratio</b>: 1-year Sharpe of at least 0.5, meaning annualised return above a 4% risk-free rate divided by annualised volatility, over the last 252 trading days.</li>
+          <li><b>Sharpe ratio</b>: 1-year Sharpe of at least 1.0, meaning annualised return above a 4% risk-free rate divided by annualised volatility, over the last 252 trading days.</li>
         </ul></li>
       <li><b>Stage 1, all stocks</b>: six checks run on all ~500 stocks (everything except earnings). Stocks that pass all six and aren't overbought or still falling go to the shortlist, up to 15.</li>
       <li><b>Stage 2, shortlist</b>: adds the earnings check and analyst data (target price, EPS estimate revisions, ratings), which are too slow to pull for every stock daily.</li>
       <li><b>Score</b> (0–100): 30% trend vs the 200-DMA, 30% momentum (3-month and 12-month), 15% entry timing (cooler RSI and discount to the 52-week high), 15% valuation (lower P/E and PEG score higher), 10% analyst outlook. Trend, momentum and entry are scaled by each stock's volatility, so a 10% move in a calm stock counts more than in a wild one. Analyst upside is capped at 30%, or 15% when the price has fallen faster than analysts have cut their targets.</li>
       <li><b>Signals</b>: <i>Trend buy</i> means above the 50- and 200-day averages with RSI 45–70. <i>Buy the dip</i> means a pullback (RSI under 40 or 15%+ off the high) in an uptrend where the bounce has started. <i>Wait: still falling</i> is the same pullback before the bounce. <i>Wait: stretched</i> means RSI above 70. <i>Wait: earnings soon</i> means a report within 14 days. <i>Avoid: downtrend</i> means 3%+ below the 200-DMA and falling over 3 months.</li>
-      <li><b>Top 3 and holding period</b>: the highest scores that pass all seven checks, locked on the first run of each month. Daily runs re-check them, and a pick is replaced early only if it falls below its 200-DMA or fails the P/E check. Monthly holding came from the Nasdaq-100 backtest, where weekly reshuffling lost returns to whipsaw. On the S&amp;P 500 backtest weekly reshuffling made more but had a deeper worst fall, so the monthly hold is kept.</li>
+      <li><b>Top 3 and holding period</b>: the highest scores that pass all seven checks, locked on the first run of each month. Daily runs re-check them, and a pick is replaced early only if it falls below its 200-DMA or fails the P/E check. Monthly holding came from the Nasdaq-100 backtest, where weekly reshuffling lost returns to whipsaw. On the S&amp;P 500 backtest weekly reshuffling has made more but had a deeper worst fall, so the monthly hold is kept.</li>
       <li><b>Track record</b>: every pick is logged with its entry price and compared with SPY over the same days. It starts on Nov 9, 2026 and is the real test of whether the ranking works.</li>
       <li><b>Backtest</b>: covers only the 200-DMA, RSI and momentum checks, on today's S&amp;P 500 members from Nov 2023. Using today's members flatters the result, as the note under the chart explains.</li>
-      <li><b>Data and refresh</b>: membership from Wikipedia's S&amp;P 500 list; prices, P/E, EPS estimates and analyst data from Yahoo Finance; US closing prices cross-checked against Alpha Vantage. News is no longer used. The dashboard refreshes Tuesday to Saturday at 6:47 AM IST, after the US close, and needs your computer on with the Claude desktop app open. Notes and briefs are written by Claude from these numbers.</li>
+      <li><b>Data and refresh</b>: membership from Wikipedia's S&amp;P 500 list; prices, P/E, EPS estimates and analyst data from Yahoo Finance; US closing prices cross-checked against Alpha Vantage. News is no longer used. The dashboard refreshes once a day, Tuesday to Saturday, after the US close: it tries hourly from 9:47 AM IST and runs on the first try when your computer is on with the Claude desktop app open. Notes and briefs are written by Claude from these numbers.</li>
     </ul>
   </details>
 </div>

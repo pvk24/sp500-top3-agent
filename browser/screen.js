@@ -38,7 +38,7 @@ for (let i = 0; i < syms.length; i += 50) {
   catch (e) { errs.push('valuation: ' + e.message); }
 }
 // Same rules as score.py (screened-out path: no analyst outlook, no earnings check)
-const PE_MAX = 40, PEG_MAX = 2.0, SHARPE_MIN = 0.5, compact = [], full = [], skipped = [];
+const PE_MAX = 40, PEG_MAX = 2.0, SHARPE_MIN = 1.0, compact = [], full = [], skipped = [];
 for (const s of syms) {
   const it = out[s];
   if (!it.sma200 || !it.hi52 || it.mom12_1 == null) { skipped.push(s); continue; }

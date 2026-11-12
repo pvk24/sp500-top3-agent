@@ -8,7 +8,7 @@ The agent automates that routine. It runs the same personal checklist (200-DMA, 
 
 ## What the agent does
 
-It runs on its own every US trading day (6:47 AM IST, after the US close) and needs no manual steps on a normal day; it only needs the computer that runs the schedule switched on with the Claude desktop app open. On each run, Claude:
+It runs on its own every US trading day, after the US close, and needs no manual steps on a normal day; it only needs the computer that runs the schedule switched on with the Claude desktop app open. On each run, Claude:
 
 - Pulls the current S&P 500 membership and a year of prices, forward P/E and EPS estimates from Yahoo Finance, then cross-checks the picks' closing prices against Alpha Vantage.
 - Runs the checks, scores every stock and ranks them.
@@ -29,7 +29,7 @@ A pick has to pass all seven checks, and then the highest scores win. In the fir
 | Momentum | 3-month return above 0, or 12-month trend up with price above the 20-day average |
 | P/E | Forward P/E above 0 and at most 40 |
 | PEG | At most 2.0 |
-| Sharpe | 1-year Sharpe of at least 0.5 |
+| Sharpe | 1-year Sharpe of at least 1.0 |
 
 1. **Screen:** six checks (all except earnings) run on every stock. Stocks that are overbought or still falling are dropped too.
 2. **Shortlist:** the 15 highest scorers get the earnings check and the analyst data.
@@ -41,7 +41,7 @@ A pick has to pass all seven checks, and then the highest scores win. In the fir
 A standard screener filters and stops: you get a long list that passes your thresholds, and the judgement is still up to you. This agent goes further in five ways.
 
 - **It ranks and decides.** It doesn't stop at 50 passing stocks. It scores them and names 3, and shows exactly why each one ranked where it did.
-- **It weighs timing and risk, not just whether a stock passes.** RSI rising or falling, distance from the 52-week high, volatility and Sharpe all feed the score, so a strong but overstretched stock ranks below a steadier one.
+- **It weighs timing and risk, not just whether a stock passes.** RSI rising or falling, distance from the 52-week high and volatility all feed the score, and a minimum Sharpe ratio screens out erratic gainers, so a strong but overstretched stock ranks below a steadier one.
 - **It explains in plain words.** Each pick comes with a note, a bull case, a bear case and catalysts. Every screened-out stock shows the check it failed.
 - **It holds and tracks.** Picks are locked for a month rather than reshuffled daily, and every pick is measured against SPY.
 - **It tests itself.** A backtest and a live track record show whether the rules actually work, which a screener never tells you.

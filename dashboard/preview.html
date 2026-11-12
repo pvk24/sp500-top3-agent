@@ -34,7 +34,7 @@ body { background: var(--color-bg); margin: 0; padding: 32px; }
   const html = await (await fetch('index.html')).text();
   const [markup, rest] = html.split('<script>');
   const root = document.getElementById('root'); root.innerHTML = markup;
-  new Function(rest.split('</script>')[0])();
+  new Function(rest.split('<\/script>')[0])();
   function render() {
     for (const [n, f] of Object.entries(draws)) for (const el of document.querySelectorAll(`[data-draw="${n}"]`)) {
       if (typeof f === 'function') f(el); else f.update(el, f.mount(el));

@@ -8,6 +8,7 @@ members = sys.argv[3] if len(sys.argv) > 3 else 'members.txt'
 names = dict(x.split('|', 1) for x in open(members).read().strip().split(';'))
 rows = json.load(open(f'{out}/scores.json')); have = {r['symbol'] for r in rows}
 SIG = dict(S='Wait: stretched', D='Buy the dip', F='Wait: still falling', T='Trend buy', A='Avoid: downtrend', W='Watch')
+SHARPE_MIN = 1.0  # keep in step with screen.js and score.py
 keys = ['chk200', 'chkRsi', 'chkMomentum', 'chkPE', 'chkPEG', 'chkSharpe']
 tmpl = {k: None for k in rows[0]}
 asof = rows[0]['asOf']; n = len(rows)
@@ -22,7 +23,7 @@ for c in csv.DictReader(open(comp)):
     if not b[2]: why.append(f'3-month return {r3:+.0f}%')
     if not b[3]: why.append('no forward P/E (loss-making)' if not pe or pe <= 0 else f'forward P/E {pe:.0f} above 40')
     if not b[4] and pe and pe > 0: why.append("PEG can't be computed (no positive EPS growth)" if peg is None else f'PEG {peg:.1f} above 2.0')
-    if not b[5]: why.append(f'1-year Sharpe {sh:.2f} below 0.5')
+    if not b[5]: why.append(f'1-year Sharpe {sh:.2f} below {SHARPE_MIN}')
     sig = SIG[c['sig']]
     if all(b) and sig not in ('Buy the dip', 'Trend buy', 'Watch'): why.append(f'signal is "{sig}"')
     r = dict(tmpl); r.update(symbol=c['s'], name=names.get(c['s'], c['s']), assetClass='Stock', currency='USD', rsi14=rsi, vsSma200=vs, return3m=r3,

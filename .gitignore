@@ -1,0 +1,9 @@
+# run outputs
+out/
+pre/
+raw.json
+*.csv
+!data/sample/*.csv
+__pycache__/
+.DS_Store
+work/

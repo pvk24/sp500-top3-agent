@@ -22,7 +22,7 @@ pct = lambda x, n=1: None if x is None else round(100 * x, n)
 EARNINGS_DAYS = 14  # no new pick inside this window before an earnings report
 PE_MAX = 40         # forward P/E must be positive and at most this
 PEG_MAX = 2.0       # forward P/E / next-year EPS growth (%) must be at most this
-SHARPE_MIN = 0.5    # 1-year Sharpe ratio (excess return over a 4% risk-free rate / volatility) must be at least this
+SHARPE_MIN = 1.0    # 1-year Sharpe ratio (excess return over a 4% risk-free rate / volatility) must be at least this
 
 rows, prices = [], []
 skipped = []

@@ -35,8 +35,9 @@ Refresh the "S&P 500 Top 3 Opportunities" dashboard (`<DASHBOARD_ID>`). Work una
    - Log any new pick with `entryPrice` set to today's price and `benchEntry` set to today's SPY close.
    - Close any open entry that is no longer a pick.
    - Write `out/track.json`: one row per entry with `{month, pickedOn, symbol, pick, entryPrice, benchmark: "SPY", benchEntry, lastPrice, returnPct, benchReturnPct, excessPct, asOf, status}`.
-9. **Cross-check (optional).** Call Alpha Vantage `GLOBAL_QUOTE` for each pick and note any previous-close gap over 1%.
-10. **Publish.**
-    - Upload `out/scores.json`, `out/prices.json` and `out/track.json`.
-    - In one write, point `datasets/scores`, `datasets/prices` and `datasets/track` at the new files, and set `state/lastSignals` with `{asOf, universe: "S&P 500", benchmark: "SPY", checks, lock, pickLog, shortlist}`.
-11. **Report.** If the picks changed or a pick isn't "On track", list the top 3 with score, signal, any failing check and return vs SPY. Otherwise reply in one line: "No change: <picks>, all on track; vs SPY <avg excess>%". Always mention errors, membership changes and price mismatches.
+9. **Backtest.** In the Yahoo tab, run `browser/backtest.js` with `SYMS` set to the member symbols. Save its summary as `out/backtest_summary.json` and `window.__backtest.curve` as `out/backtest.json`. If it fails, keep yesterday's backtest and say so.
+10. **Cross-check (optional).** Call Alpha Vantage `GLOBAL_QUOTE` for each pick and note any previous-close gap over 1%.
+11. **Publish.**
+    - Upload `out/scores.json`, `out/prices.json`, `out/track.json`, `out/backtest.json` and `out/backtest_summary.json`.
+    - In one write, point `datasets/scores`, `datasets/prices`, `datasets/track`, `datasets/backtest` and `datasets/backtestSummary` at the new files, and set `state/lastSignals` with `{asOf, universe: "S&P 500", benchmark: "SPY", checks, lock, pickLog, shortlist}`.
+12. **Report.** If the picks changed or a pick isn't "On track", list the top 3 with score, signal, any failing check and return vs SPY. Otherwise reply in one line: "No change: <picks>, all on track; vs SPY <avg excess>%". Always mention errors, membership changes and price mismatches.

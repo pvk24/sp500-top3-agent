@@ -1,0 +1,70 @@
+{
+ "asOf": "2026-11-11",
+ "universe": "S&P 500",
+ "benchmark": "SPY",
+ "checks": [
+  "200-DMA",
+  "Earnings",
+  "RSI",
+  "Momentum",
+  "P/E",
+  "PEG",
+  "Sharpe"
+ ],
+ "lock": {
+  "month": "2026-11",
+  "picks": [
+   "BIIB",
+   "HUM",
+   "MET"
+  ],
+  "lockedOn": "2026-11-09"
+ },
+ "replaced": [],
+ "pickLog": [
+  {
+   "month": "2026-11",
+   "pickedOn": "2026-11-09",
+   "symbol": "BIIB",
+   "pick": 1,
+   "entryPrice": 259.4,
+   "benchmark": "SPY",
+   "benchEntry": 752.36
+  },
+  {
+   "month": "2026-11",
+   "pickedOn": "2026-11-09",
+   "symbol": "HUM",
+   "pick": 2,
+   "entryPrice": 436.49,
+   "benchmark": "SPY",
+   "benchEntry": 752.36
+  },
+  {
+   "month": "2026-11",
+   "pickedOn": "2026-11-09",
+   "symbol": "MET",
+   "pick": 3,
+   "entryPrice": 102.81,
+   "benchmark": "SPY",
+   "benchEntry": 752.36
+  }
+ ],
+ "shortlist": [
+  "BIIB",
+  "MET",
+  "ABBV",
+  "HUM",
+  "MRK",
+  "AMD",
+  "EBAY",
+  "STT",
+  "TXN",
+  "PFG",
+  "CSX",
+  "BNY",
+  "ADI",
+  "WAB",
+  "DE"
+ ]
+}

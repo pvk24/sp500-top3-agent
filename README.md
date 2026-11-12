@@ -8,10 +8,10 @@ It replaces a manual routine: opening each stock on a watchlist, checking the sa
 
 ## Runs on its own
 
-- **Every US trading day, automatically.** A scheduled Claude run refreshes everything at 6:47 AM IST (Tuesday to Saturday), after the US market close.
-- **Corrects its own picks.** Each run re-checks the 3 picks and swaps one out if it falls below its 200-DMA or fails the P/E check. A fresh top 3 is chosen at the start of every month.
-- **No manual steps on a normal day.** Membership, prices, scores, notes, the track record and your (private) dashboard all update without you. You only step in to change the checklist, the universe or the schedule.
-- **What it needs:** the computer that runs the schedule switched on with the Claude desktop app open, because the data is collected through its browser. If a run can't reach the browser or the data, it skips publishing and says why instead of posting partial data.
+- **Every US trading day, with no laptop.** A GitHub Actions job in this repo (`.github/workflows/daily.yml`) runs at 9:00 AM IST, Tuesday to Saturday, after each US trading day. It pulls S&P 500 membership from Wikipedia and prices, valuations and analyst data from Yahoo Finance, scores every stock, re-runs the backtest and saves the results to `data/live/`.
+- **Claude writes the notes and publishes.** A scheduled Claude task in the cloud picks up `data/live/` from 10:17 AM IST, writes the notes and bull and bear cases, and updates the private live dashboard. It retries hourly until 4:17 PM and sends a notification if the GitHub job didn't deliver.
+- **Corrects its own picks.** Each run re-checks the 3 picks and swaps one out if it falls below its 200-DMA or fails the P/E check. A fresh top 3 is chosen at the start of every month. The lock and the pick log live in `data/live/state.json`.
+- **No manual steps on a normal day.** You only step in to change the checklist, the universe or the schedule. If a run can't get the data, it publishes nothing that day rather than partial data.
 
 The public dashboard link is a frozen snapshot of the first run (Nov 9, 2026). Claude can only update a dashboard that isn't public, so the daily runs publish to a private one.
 
@@ -25,7 +25,7 @@ The public dashboard link is a frozen snapshot of the first run (Nov 9, 2026). C
 | Momentum | 3-month return above 0, or 12-month trend up with price above the 20-day average |
 | P/E | Forward P/E above 0 and at most 40 |
 | PEG | Forward P/E ÷ expected EPS growth (%) at most 2.0 |
-| Sharpe | 1-year Sharpe of at least 0.5 (4% risk-free rate) |
+| Sharpe | 1-year Sharpe of at least 1.0 (4% risk-free rate) |
 
 **Score (0–100):** 30% trend, 30% momentum, 15% entry timing, 15% valuation, 10% analyst outlook. Trend, momentum and entry are scaled by each stock's volatility.
 
@@ -47,7 +47,7 @@ merge_compact.py ──► adds every screened-out stock with the check it faile
 dashboard/index.html ◄── scores, prices, track, backtest
 ```
 
-The browser scripts run as JavaScript inside a `finance.yahoo.com` (or Wikipedia) tab, because they call Yahoo's own endpoints from that page. In this project Claude runs them in its built-in browser; you can also paste them into your browser's developer console.
+Daily runs use `collector/run_daily.py`, the Python version of the browser scripts with the same rules, on GitHub Actions. The browser scripts are kept for running a screen by hand: paste them into your browser's developer console on a `finance.yahoo.com` (or Wikipedia) tab.
 
 ## Repo layout
 
@@ -57,12 +57,15 @@ The browser scripts run as JavaScript inside a `finance.yahoo.com` (or Wikipedia
 | `browser/screen.js` | Stage 1: prices, technicals, Sharpe and valuation for every member, the six non-earnings checks, and a stage-1 score |
 | `browser/stage2.js` | Stage 2: earnings date, analyst target, ratings and EPS revisions for the shortlist |
 | `browser/backtest.js` | Monthly backtest of the price checks on today's members, against SPY |
+| `collector/run_daily.py` | The whole daily run without a browser: membership, prices, valuation, analyst data, scoring, track record and backtest |
+| `.github/workflows/daily.yml` | Runs the collector on GitHub's servers every weekday morning and commits `data/live/` |
+| `data/live/` | The latest daily results and the saved state (lock and pick log) |
 | `scoring/build_raw.py` | Combines stage 1 and stage 2 output into `raw.json` |
 | `scoring/score.py` | Runs all seven checks, scores and ranks, sets signals, applies the monthly lock, writes the dashboard datasets |
 | `scoring/merge_compact.py` | Adds the screened-out stocks, with the reason each one failed |
 | `dashboard/index.html` | The dashboard page (runs inside a Claude Data artifact) |
 | `dashboard/preview.html` | A standalone preview of the dashboard using the sample data |
-| `agent/refresh_prompt.md` | The instructions the daily scheduled Claude run follows to refresh everything |
+| `agent/refresh_prompt.md` | The earlier laptop-based refresh instructions, kept for reference |
 | `data/sample/` | A full run from Nov 9, 2026 (inputs and outputs) |
 | `docs/overview.md` | One-page overview: why, what and how |
 
