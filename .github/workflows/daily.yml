@@ -1,11 +1,15 @@
 # Daily S&P 500 screen on GitHub's servers: no laptop needed.
-# Runs Tuesday to Saturday at 03:30 UTC (9:00 AM IST), after each US trading day, and saves the results to data/live/.
-# GitHub may start scheduled jobs a little late at busy times. You can also run it by hand from the Actions tab.
+# Runs Tuesday to Saturday after each US trading day and saves the results to data/live/.
+# GitHub's schedules are best-effort: a scheduled run can start late or be skipped at busy times.
+# So there are three tries (8:53, 9:53 and 11:11 AM IST); a try that finds today's results already saved stops at once.
+# You can also run it by hand from the Actions tab.
 name: Daily screen
 
 on:
   schedule:
-    - cron: '30 3 * * 2-6'
+    - cron: '23 3 * * 2-6'
+    - cron: '23 4 * * 2-6'
+    - cron: '41 5 * * 2-6'
   workflow_dispatch:
 
 permissions:
@@ -21,16 +25,27 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+      - name: Already done today?
+        id: done
+        run: |
+          today=$(TZ=Asia/Kolkata date +%Y-%m-%d)
+          if [ "${{ github.event_name }}" = "schedule" ] && grep -q "\"asOf\": \"$today\"" data/live/run.json 2>/dev/null; then
+            echo "Today's results are already saved; nothing to do."; echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-python@v5
+        if: steps.done.outputs.skip != 'true'
         with:
           python-version: '3.12'
       - run: pip install -r collector/requirements.txt
+        if: steps.done.outputs.skip != 'true'
       - name: Collect, score and backtest
+        if: steps.done.outputs.skip != 'true'
         run: python collector/run_daily.py
       - name: Save results
+        if: steps.done.outputs.skip != 'true'
         run: |
           git config user.name "sp500-top3-agent"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/live
           git diff --cached --quiet || git commit -m "Daily screen $(date -u +%Y-%m-%d)"
-          git push
+          git pull --rebase origin main && git push
