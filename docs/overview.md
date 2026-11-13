@@ -14,6 +14,8 @@ It runs on its own every US trading day, after the US close, and needs no manual
 - Runs the checks, scores every stock and ranks them.
 - Pulls earnings dates and analyst data (target price, EPS revisions, ratings) for the 15-stock shortlist only.
 - Writes a short note on each shortlisted stock, plus a bull case, bear case and catalysts for each pick, using only the numbers it pulled.
+- Reads recent headlines for each pick and judges news sentiment (Positive, Mixed or Negative).
+- Grades its own writing before publishing (correctness, no hallucinations, relevance, coherence) and rewrites anything that fails.
 - Logs every pick's entry price and tracks its return against SPY.
 - Publishes it all to a live dashboard showing the top 3, the shortlist, all ~500 stocks with the reason each one failed, the track record and a backtest.
 

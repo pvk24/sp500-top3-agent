@@ -9,7 +9,7 @@ It replaces a manual routine: opening each stock on a watchlist, checking the sa
 ## Runs on its own
 
 - **Every US trading day, with no laptop.** A GitHub Actions job in this repo (`.github/workflows/daily.yml`) runs at 9:00 AM IST, Tuesday to Saturday, after each US trading day. It pulls S&P 500 membership from Wikipedia and prices, valuations and analyst data from Yahoo Finance, scores every stock, re-runs the backtest and saves the results to `data/live/`.
-- **Claude writes the notes and publishes.** A scheduled Claude task in the cloud picks up `data/live/` from 10:17 AM IST, writes the notes and bull and bear cases, and updates the private live dashboard. It retries hourly until 4:17 PM and sends a notification if the GitHub job didn't deliver.
+- **Claude reasons, checks itself and publishes.** A scheduled Claude task in the cloud picks up `data/live/` at 10:17 AM IST (retrying at 1:17 PM). It decides whether the data is fresh and complete enough to publish, writes the notes and bull and bear cases, and reads each pick's recent headlines (`news.json`) to judge news sentiment. Before publishing it grades its own writing on four evals (correctness, no hallucinations, relevance, coherence), rewrites anything that fails, and emails a summary with the eval results. The rules choose the picks; Claude never does.
 - **Corrects its own picks.** Each run re-checks the 3 picks and swaps one out if it falls below its 200-DMA or fails the P/E check. A fresh top 3 is chosen at the start of every month. The lock and the pick log live in `data/live/state.json`.
 - **No manual steps on a normal day.** You only step in to change the checklist, the universe or the schedule. If a run can't get the data, it publishes nothing that day rather than partial data.
 
@@ -115,5 +115,5 @@ It tests **today's** members, and several of the strategy's picks (AppLovin, Pal
 
 1. Started as a 10-symbol TradingView watchlist (stocks, gold, crypto).
 2. Moved to the Nasdaq-100 for a bigger universe.
-3. Added P/E, PEG and Sharpe; dropped news sentiment.
+3. Added P/E, PEG and Sharpe; dropped news sentiment from the score. (News came back in Nov 2026 as context for the agent's analysis, not as a scoring input.)
 4. Moved to the S&P 500, because the AI-heavy Nasdaq-100 made PEG and Sharpe comparisons unfair; the benchmark switched from QQQ to SPY.

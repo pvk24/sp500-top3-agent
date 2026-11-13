@@ -5,7 +5,8 @@ It does what browser/members.js, screen.js, stage2.js and backtest.js do in a br
 then calls scoring/build_raw.py, scoring/score.py and scoring/merge_compact.py.
 
 Usage: python3 collector/run_daily.py [--date YYYY-MM-DD]
-Writes data/live/: scores.json, prices.json, track.json, backtest.json, backtest_summary.json, state.json, run.json
+Writes data/live/: scores.json, prices.json, track.json, backtest.json, backtest_summary.json, news.json, state.json, run.json
+news.json holds recent headlines for the shortlist and picks; the daily Claude run reads them and judges sentiment.
 State (the monthly lock and the pick log) is kept in data/live/state.json between runs.
 """
 import csv, datetime as dt, html.parser, json, math, os, re, subprocess, sys, time
@@ -204,6 +205,20 @@ def outlook(sym, cr):
 
 
 # ---------- backtest (same rules as browser/backtest.js) ----------
+def news(sym, days=14, keep=8):
+    """Recent headlines for one stock from Yahoo Finance search. Raw facts only; Claude judges sentiment."""
+    j = get(f'https://query2.finance.yahoo.com/v1/finance/search?q={quote(sym)}&quotesCount=0&newsCount=20&enableFuzzyQuery=false')
+    cutoff = time.time() - days * 86400
+    out = []
+    for n in j.get('news') or []:
+        t = n.get('providerPublishTime') or 0
+        if t < cutoff or sym not in (n.get('relatedTickers') or [sym]): continue
+        out.append({'title': n.get('title'), 'publisher': n.get('publisher'), 'link': n.get('link'),
+                    'published': dt.datetime.fromtimestamp(t, dt.timezone.utc).strftime('%Y-%m-%d')})
+        if len(out) >= keep: break
+    return out
+
+
 def backtest(adj_by_sym, bench_dates):
     D = bench_dates
     syms = [s for s in adj_by_sym if s != BENCH]
@@ -391,6 +406,15 @@ def main():
                       'benchmark': e['benchmark'], 'benchEntry': e['benchEntry'], 'lastPrice': round(last, 2), 'returnPct': round(r_, 2),
                       'benchReturnPct': round(b_, 2), 'excessPct': round(r_ - b_, 2), 'asOf': today, 'status': 'Closed' if e.get('closedOn') else 'Open'})
 
+    # news for the picks and the shortlist (headlines only; never stops the run)
+    say('news')
+    nw = {}
+    for s in dict.fromkeys(new_lock['picks'] + short):
+        try: nw[s] = news(s)
+        except Exception as e: errs.append(f'{s} news: {e}')
+        time.sleep(0.2)
+    json.dump({'asOf': today, 'items': nw}, open(f'{LIVE}/news.json', 'w'), indent=1)
+
     # backtest
     say('backtest')
     try:
@@ -409,7 +433,7 @@ def main():
     json.dump(state, open(state_path, 'w'), indent=1)
     run = {'asOf': today, 'finishedAt': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'members': len(mem), 'scored': len(compact),
            'passedSix': len(full), 'shortlist': short, 'picks': new_lock['picks'], 'replaced': new_lock.get('replaced', []),
-           'spyClose': spy_close, 'backtest': bool(bt), 'errors': errs[:50]}
+           'spyClose': spy_close, 'backtest': bool(bt), 'news': sum(1 for v in nw.values() if v), 'errors': errs[:50]}
     json.dump(run, open(f'{LIVE}/run.json', 'w'), indent=1)
     print(json.dumps(run, indent=1))
 
