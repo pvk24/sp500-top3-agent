@@ -1,25 +1,26 @@
 {
- "asOf": "2026-11-13",
- "finishedAt": "2026-11-13T05:54:50Z",
+ "asOf": "2026-11-14",
+ "finishedAt": "2026-11-13T20:58:36Z",
  "members": 502,
  "scored": 499,
- "passedSix": 21,
+ "passedSix": 20,
  "shortlist": [
   "BIIB",
-  "ABBV",
   "HUM",
-  "MET",
   "MRK",
+  "CRL",
   "AMD",
-  "EBAY",
   "KDP",
+  "EBAY",
   "STT",
   "TXN",
-  "CSX",
   "DAL",
+  "CSX",
   "PFG",
-  "ADI",
-  "BNY"
+  "DE",
+  "BNY",
+  "BALL",
+  "MET"
  ],
  "picks": [
   "BIIB",
@@ -27,7 +28,8 @@
   "MET"
  ],
  "replaced": [],
- "spyClose": 757.12,
+ "spyClose": 753.61,
  "backtest": true,
+ "news": 15,
  "errors": []
 }
