@@ -1,6 +1,6 @@
 {
  "asOf": "2026-11-14",
- "finishedAt": "2026-11-13T20:58:36Z",
+ "finishedAt": "2026-11-14T07:11:42Z",
  "members": 502,
  "scored": 499,
  "passedSix": 20,
@@ -14,12 +14,12 @@
   "EBAY",
   "STT",
   "TXN",
-  "DAL",
   "CSX",
   "PFG",
   "DE",
   "BNY",
   "BALL",
+  "ADI",
   "MET"
  ],
  "picks": [
@@ -28,7 +28,7 @@
   "MET"
  ],
  "replaced": [],
- "spyClose": 753.61,
+ "spyClose": 754.37,
  "backtest": true,
  "news": 15,
  "errors": []

@@ -153,6 +153,12 @@
   ],
   "MRK": [
    {
+    "title": "What Is The Market Seeing In Eli Lilly Stock?",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/market-seeing-eli-lilly-stock-003308402.html",
+    "published": "2026-11-14"
+   },
+   {
     "title": "Merck announces European CHMP recommends approval of Enflonsia",
     "publisher": "TipRanks",
     "link": "https://finance.yahoo.com/healthcare/articles/merck-announces-european-chmp-recommends-194539730.html",
@@ -192,12 +198,6 @@
     "title": "Merck Gets EU Recommendations for Welireg Kidney Cancer Combo, Enflonsia RSV Expansion",
     "publisher": "MT Newswires",
     "link": "https://finance.yahoo.com/healthcare/articles/merck-gets-eu-recommendations-welireg-122031197.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Merck Receives Positive EU CHMP Opinion to Expand Marketing Authorization for ENFLONSIA\u00ae (clesrovimab) to Include Children Up to 24 Months of Age Who Remain Vulnerable to Severe RSV Disease Through Their Second RSV Season",
-    "publisher": "Business Wire",
-    "link": "https://finance.yahoo.com/healthcare/articles/merck-receives-positive-eu-chmp-114000312.html",
     "published": "2026-11-13"
    }
   ],
@@ -253,55 +253,61 @@
   ],
   "AMD": [
    {
-    "title": "'Nothing has changed': Why some Nvidia stock bulls aren't wavering after Jensen Huang ouster",
-    "publisher": "Yahoo Finance",
-    "link": "https://finance.yahoo.com/technology/article/nothing-has-changed-why-some-nvidia-stock-bulls-arent-wavering-after-jensen-huang-ouster-204522204.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Stock market today: Nasdaq leads Dow, S&P 500 lower as chip stock sell-off accelerates",
-    "publisher": "Yahoo Finance",
-    "link": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Bank of America resets AMD stock price target as Nvidia CEO exits",
-    "publisher": "TheStreet",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/bank-america-resets-amd-stock-201300212.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Nvidia Tanks as Altman Joins Dario in AI Chip Export Ban",
-    "publisher": "Moby",
-    "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-tanks-altman-joins-dario-200730448.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "AMDL 2X AMD ETF Tumbles 18% as AMD Sinks Amid Michael Burry\u2019s Bearish Chip Bets",
-    "publisher": "24/7 Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/amdl-2x-amd-etf-tumbles-200220473.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Wall St slides as Nvidia uncertainty drags tech shares lower",
-    "publisher": "Reuters",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-dip-nvidia-tumult-103901600.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Stock Market Today: Indexes Pare Losses; S&P's Worst Performer Sells Chips, And It's Not Nvidia (Live Coverage)",
-    "publisher": "Investor's Business Daily",
-    "link": "https://finance.yahoo.com/m/59c1380c-6194-35f8-be3b-4a6a3148bfa4/stock-market-today%3A-indexes.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Nvidia Scandal is Poking Real Holes in the AI Trade. But That Doesn\u2019t Mean it\u2019s Over.",
+    "title": "Review & Preview: Moving On",
     "publisher": "Barrons.com",
-    "link": "https://finance.yahoo.com/m/8cfa758b-f94e-38fb-92b4-fb2bde5383db/nvidia-scandal-is-poking-real.html",
+    "link": "https://finance.yahoo.com/m/aaf2f5e5-33ee-38f6-879e-ff5ff7d5599d/review-%26-preview%3A-moving-on.html",
+    "published": "2026-11-14"
+   },
+   {
+    "title": "Wall Street stocks mostly lower as Nvidia extends slump",
+    "publisher": "AFP",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-stocks-mostly-lower-230704278.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Stocks to Watch Recap: Nvidia, AMD, Microsoft",
+    "publisher": "The Wall Street Journal",
+    "link": "https://finance.yahoo.com/m/ba2605ab-963c-3c6b-975c-7b68113e59b6/stocks-to-watch-recap%3A.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Stock Market Today, Nov. 13: Cerebras Surges Over 11% on Record Q3 Revenue and Raised 2026 Guidance",
+    "publisher": "Motley Fool",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-13-223028372.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Stock Market Today, Nov. 13: Nvidia Slides After HSBC Downgrades Stock to Hold on CEO Uncertainty",
+    "publisher": "Motley Fool",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-13-222002466.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "U.S. Stocks Mixed on Nvidia Fallout Fears",
+    "publisher": "The Wall Street Journal",
+    "link": "https://finance.yahoo.com/m/3b3fdef0-4429-3bee-9bcd-bf73c3a77926/u.s.-stocks-mixed-on-nvidia.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Stock Market Today, Nov. 13: AMD Sinks 8.75% on Sector AI-Chip Sell-Off After Early Gains Reverse",
+    "publisher": "Motley Fool",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-13-221355021.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Xanadu Breakthroughs & Partnerships Advance Roadmap \u2013 Quarterly Update Report",
+    "publisher": "Exec Edge",
+    "link": "https://finance.yahoo.com/technology/ai/articles/xanadu-breakthroughs-partnerships-advance-roadmap-221337932.html",
     "published": "2026-11-13"
    }
   ],
   "KDP": [
+   {
+    "title": "Keurig Dr Pepper (KDP) Raises $2b In Equity, Is The Stock Fully Valued?",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/keurig-dr-pepper-kdp-raises-061204170.html",
+    "published": "2026-11-14"
+   },
    {
     "title": "Sector Update: Consumer Stocks Mixed Late Afternoon",
     "publisher": "MT Newswires",
@@ -343,12 +349,6 @@
     "publisher": "PR Newswire",
     "link": "https://finance.yahoo.com/markets/stocks/articles/keurig-dr-pepper-announces-pricing-022100253.html",
     "published": "2026-11-13"
-   },
-   {
-    "title": "Keurig Is Paying Down Debt Ahead of Coffee Split. What That Means for the Stock.",
-    "publisher": "Barrons.com",
-    "link": "https://finance.yahoo.com/m/53996aec-5d2f-3dd8-8bf4-c14d039dd84f/keurig-is-paying-down-debt.html",
-    "published": "2026-11-12"
    }
   ],
   "EBAY": [
@@ -403,6 +403,18 @@
   ],
   "STT": [
    {
+    "title": "Franklin Templeton Is Seeing a Turnaround. The Stock Is, Too.",
+    "publisher": "Barrons.com",
+    "link": "https://finance.yahoo.com/m/1727fcd4-7c38-3b11-9f95-51fcfe969ee9/franklin-templeton-is-seeing.html",
+    "published": "2026-11-14"
+   },
+   {
+    "title": "3 US Cash Yield Stocks Retail Investors Are Watching After The Inflation Surprise",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/3-us-cash-yield-stocks-002302057.html",
+    "published": "2026-11-14"
+   },
+   {
     "title": "Why Is State Street (STT) Up 3.6% Since Last Earnings Report?",
     "publisher": "Zacks",
     "link": "https://finance.yahoo.com/markets/stocks/articles/why-state-street-stt-3-153003111.html",
@@ -437,21 +449,15 @@
     "publisher": "Zacks",
     "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-highlights-u-132800124.html",
     "published": "2026-11-12"
-   },
-   {
-    "title": "Is Philip Morris International (PM) Fairly Valued On State Street\u2019s Latest ETF Buy?",
-    "publisher": "Simply Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/philip-morris-international-pm-fairly-231329721.html",
-    "published": "2026-11-11"
-   },
-   {
-    "title": "Drug Makers or Biotech Bets: Which ETF Is the Better Buy, State Street\u2019s XPH or First Trust\u2019s FBT?",
-    "publisher": "Motley Fool",
-    "link": "https://finance.yahoo.com/healthcare/articles/drug-makers-biotech-bets-etf-221327235.html",
-    "published": "2026-11-11"
    }
   ],
   "TXN": [
+   {
+    "title": "Why Did Texas Instruments Stock Beat NXP Over Five Years?",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/why-did-texas-instruments-stock-010308968.html",
+    "published": "2026-11-14"
+   },
    {
     "title": "Nvidia Succession Shows Key Part of CFOs\u2019 Jobs: Serving as On-Call CEOs in a Pinch",
     "publisher": "The Wall Street Journal",
@@ -492,62 +498,6 @@
     "title": "Stocks Recover as Other Chipmakers May Benefit from Nvidia\u2019s Turmoil",
     "publisher": "Barchart",
     "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-recover-other-chipmakers-may-162243875.html",
-    "published": "2026-11-12"
-   },
-   {
-    "title": "Who is NVIDIA\u2019s new CEO Colette Kress?",
-    "publisher": "Investing.com",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-ceo-colette-kress-153831193.html",
-    "published": "2026-11-12"
-   }
-  ],
-  "DAL": [
-   {
-    "title": "Amex Platinum's $600 hotel credit now comes with a catch starting in 2027",
-    "publisher": "Yahoo Personal Finance",
-    "link": "https://finance.yahoo.com/personal-finance/credit-cards/article/amex-platinums-benefits-updates-2027-181143354.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "United\u2019s CEO Says He\u2019s \u201c100%\u201d Sure an American Deal Could Be Approved",
-    "publisher": "24/7 Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/united-ceo-says-100-sure-155347118.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "One Reason United Airlines Stock Looks Better Than Its Price",
-    "publisher": "Trefis",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/one-reason-united-airlines-stock-121251644.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Azul Q3 Earnings Call Highlights",
-    "publisher": "MarketBeat",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/azul-q3-earnings-call-highlights-071446758.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Why Is Delta Air Lines (DAL) Fighting Heathrow\u2019s Planned 2028 Terminal Move?",
-    "publisher": "Simply Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/why-delta-air-lines-dal-061002931.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "DAL Stock Heads For Red Week: Delta CEO Says AI Fare-Shopping Agents Are On Its Radar As Holiday Travel Demand Holds Strong",
-    "publisher": "Stocktwits",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/dal-stock-heads-red-week-060631890.html",
-    "published": "2026-11-13"
-   },
-   {
-    "title": "Best airline credit cards (2026)",
-    "publisher": "Personal Finance Embeddable Content",
-    "link": "https://finance.yahoo.com/personal-finance/credit-cards/article/airline-credit-cards-182914019.html",
-    "published": "2026-11-12"
-   },
-   {
-    "title": "2 Airline Stocks Drawing Unusual Options Volume Today",
-    "publisher": "Schaeffer's Investment Research",
-    "link": "https://finance.yahoo.com/markets/options/articles/2-airline-stocks-drawing-unusual-173938522.html",
     "published": "2026-11-12"
    }
   ],
@@ -654,6 +604,12 @@
   "DE": [],
   "BNY": [
    {
+    "title": "3 US Cash Yield Stocks Retail Investors Are Watching After The Inflation Surprise",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/3-us-cash-yield-stocks-002302057.html",
+    "published": "2026-11-14"
+   },
+   {
     "title": "FRN Variable Rate Fix",
     "publisher": "Business Wire",
     "link": "https://finance.yahoo.com/markets/options/articles/frn-variable-rate-fix-171600372.html",
@@ -694,15 +650,15 @@
     "publisher": "24/7 Wall St.",
     "link": "https://finance.yahoo.com/markets/crypto/articles/deutsche-bank-launched-crypto-custody-172458766.html",
     "published": "2026-11-12"
-   },
-   {
-    "title": "FRN Variable Rate Fix",
-    "publisher": "Business Wire",
-    "link": "https://finance.yahoo.com/markets/options/articles/frn-variable-rate-fix-164300834.html",
-    "published": "2026-11-12"
    }
   ],
   "BALL": [
+   {
+    "title": "Should You Buy Amcor Stock At This Price?",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/buy-amcor-stock-price-212817750.html",
+    "published": "2026-11-13"
+   },
    {
     "title": "Should International Paper Stock Holders Look At Amcor Instead?",
     "publisher": "Trefis",
@@ -744,12 +700,56 @@
     "publisher": "MT Newswires",
     "link": "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-downgrades-ball-neutral-overweight-122035775.html",
     "published": "2026-11-04"
+   }
+  ],
+  "ADI": [
+   {
+    "title": "Why Did Texas Instruments Stock Beat NXP Over Five Years?",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/why-did-texas-instruments-stock-010308968.html",
+    "published": "2026-11-14"
    },
    {
-    "title": "Truist Trims Price Target on Ball to $76 From $78, Keeps Buy Rating",
-    "publisher": "MT Newswires",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/truist-trims-price-target-ball-115428460.html",
-    "published": "2026-11-04"
+    "title": "Why Analog Devices (ADI) Dipped More Than Broader Market Today",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/why-analog-devices-adi-dipped-220001409.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Analog Devices (ADI) Draws Fresh ETF Buying, Is The Stock Already Pricey?",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/analog-devices-adi-draws-fresh-180713639.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Analog Devices (ADI) Stock Looks Fully Valued As It Buys Into AI",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/analog-devices-adi-stock-looks-170927516.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Roblox downgraded, Palo Alto upgraded: Wall Street's top analyst calls",
+    "publisher": "The Fly",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/spacex-initiated-lululemon-downgraded-wall-133354953.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Disney to Report Q4 Earnings: What's in Store for the Stock?",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/disney-report-q4-earnings-whats-144400406.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "AMAT Q4 Earnings Beat on Record Semiconductor Systems Sales",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/amat-q4-earnings-beat-record-140000252.html",
+    "published": "2026-11-13"
+   },
+   {
+    "title": "Infleqtion Gears Up to Report Q3 Earnings: How to Play the Stock",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/infleqtion-gears-report-q3-earnings-130600295.html",
+    "published": "2026-11-13"
    }
   ]
  }
