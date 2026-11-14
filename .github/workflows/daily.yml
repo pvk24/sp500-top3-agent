@@ -1,4 +1,4 @@
-# Daily S&P 500 screen on GitHub's servers: fully auomated, no laptop needed.
+# Daily S&P 500 screen on GitHub's servers: fully automated, no laptop needed.
 # Runs Tuesday to Saturday after each US trading day and saves the results to data/live/.
 # GitHub's schedules are best-effort: a scheduled run can start late or be skipped at busy times.
 # So there are three tries (8:53, 9:53 and 11:11 AM IST); a try that finds today's results already saved stops at once.
