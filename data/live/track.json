@@ -7,11 +7,11 @@
   "entryPrice": 259.4,
   "benchmark": "SPY",
   "benchEntry": 752.36,
-  "lastPrice": 253.4,
-  "returnPct": -2.31,
-  "benchReturnPct": 0.27,
-  "excessPct": -2.58,
-  "asOf": "2026-11-14",
+  "lastPrice": 251.65,
+  "returnPct": -2.99,
+  "benchReturnPct": -1.65,
+  "excessPct": -1.34,
+  "asOf": "2026-11-17",
   "status": "Open"
  },
  {
@@ -22,11 +22,11 @@
   "entryPrice": 436.49,
   "benchmark": "SPY",
   "benchEntry": 752.36,
-  "lastPrice": 450.0,
-  "returnPct": 3.1,
-  "benchReturnPct": 0.27,
-  "excessPct": 2.83,
-  "asOf": "2026-11-14",
+  "lastPrice": 461.25,
+  "returnPct": 5.67,
+  "benchReturnPct": -1.65,
+  "excessPct": 7.32,
+  "asOf": "2026-11-17",
   "status": "Open"
  },
  {
@@ -37,11 +37,11 @@
   "entryPrice": 102.81,
   "benchmark": "SPY",
   "benchEntry": 752.36,
-  "lastPrice": 102.65,
-  "returnPct": -0.16,
-  "benchReturnPct": 0.27,
-  "excessPct": -0.42,
-  "asOf": "2026-11-14",
+  "lastPrice": 101.45,
+  "returnPct": -1.32,
+  "benchReturnPct": -1.65,
+  "excessPct": 0.33,
+  "asOf": "2026-11-17",
   "status": "Open"
  }
 ]
