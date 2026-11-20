@@ -1,25 +1,24 @@
 {
- "asOf": "2026-11-19",
- "finishedAt": "2026-11-19T04:50:07Z",
+ "asOf": "2026-11-20",
+ "finishedAt": "2026-11-20T04:50:39Z",
  "members": 502,
- "scored": 498,
- "passedSix": 18,
+ "scored": 499,
+ "passedSix": 14,
  "shortlist": [
   "VTRS",
   "BIIB",
   "EG",
+  "CPAY",
   "MET",
+  "CAH",
   "CRL",
-  "AMD",
+  "BDX",
   "NUE",
-  "BEN",
-  "EBAY",
   "SWK",
+  "EBAY",
   "DAL",
-  "LUV",
   "TXN",
-  "CSX",
-  "ADI",
+  "DRI",
   "HUM"
  ],
  "picks": [
@@ -28,10 +27,8 @@
   "MET"
  ],
  "replaced": [],
- "spyClose": 730.2,
+ "spyClose": 715.87,
  "backtest": true,
- "news": 16,
- "errors": [
-  "SNDK: float division by zero"
- ]
+ "news": 15,
+ "errors": []
 }
