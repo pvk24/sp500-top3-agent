@@ -1,25 +1,21 @@
 {
- "asOf": "2026-11-20",
- "finishedAt": "2026-11-20T04:50:39Z",
+ "asOf": "2026-11-21",
+ "finishedAt": "2026-11-21T04:49:18Z",
  "members": 502,
  "scored": 499,
- "passedSix": 14,
+ "passedSix": 9,
  "shortlist": [
   "VTRS",
-  "BIIB",
   "EG",
+  "BIIB",
   "CPAY",
-  "MET",
   "CAH",
-  "CRL",
   "BDX",
-  "NUE",
   "SWK",
   "EBAY",
-  "DAL",
-  "TXN",
   "DRI",
-  "HUM"
+  "HUM",
+  "MET"
  ],
  "picks": [
   "BIIB",
@@ -27,8 +23,8 @@
   "MET"
  ],
  "replaced": [],
- "spyClose": 715.87,
+ "spyClose": 689.81,
  "backtest": true,
- "news": 15,
+ "news": 10,
  "errors": []
 }
