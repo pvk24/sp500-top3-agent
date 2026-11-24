@@ -1,58 +1,131 @@
 {
- "asOf": "2026-11-21",
+ "asOf": "2026-11-24",
  "items": {
-  "BIIB": [],
+  "BIIB": [
+   {
+    "title": "Stoke Therapeutics and Biogen Announce Presentations of Long-Term Clinical Data for Zorevunersen, an Investigational Medicine for the Treatment of Dravet Syndrome, at the 2026 American Epilepsy Society Annual Meeting",
+    "publisher": "Business Wire",
+    "link": "https://finance.yahoo.com/healthcare/articles/stoke-therapeutics-biogen-announce-presentations-130000066.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Stoke Therapeutics and Biogen Announce Presentations of Long-Term Clinical Data for Zorevunersen, an Investigational Medicine for the Treatment of Dravet Syndrome, at the 2026 American Epilepsy Society Annual Meeting",
+    "publisher": "GlobeNewswire",
+    "link": "https://finance.yahoo.com/healthcare/articles/stoke-therapeutics-biogen-announce-presentations-130000152.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Should You Buy Jazz Pharmaceuticals Stock For Its Cash?",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/buy-jazz-pharmaceuticals-stock-cash-152744275.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "Mizuho Securities Adjusts Biogen Price Target to $271 From $241, Maintains Outperform Rating",
+    "publisher": "MT Newswires",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/mizuho-securities-adjusts-biogen-price-145623258.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "Are Wall Street Analysts Predicting Biogen Stock Will Climb or Sink?",
+    "publisher": "Barchart",
+    "link": "https://finance.yahoo.com/healthcare/articles/wall-street-analysts-predicting-biogen-142100702.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "Clarity AD CSF Substudy Findings on Lecanemab Treatment and \u03b1-Synuclein Co-Pathology Presented at CTAD 2026",
+    "publisher": "GlobeNewswire",
+    "link": "https://finance.yahoo.com/healthcare/articles/clarity-ad-csf-substudy-findings-183500053.html",
+    "published": "2026-11-19"
+   },
+   {
+    "title": "Clarity AD CSF Substudy Findings on Lecanemab Treatment and \u03b1-Synuclein Co-Pathology Presented at CTAD 2026",
+    "publisher": "PR Newswire",
+    "link": "https://finance.yahoo.com/healthcare/articles/clarity-ad-csf-substudy-findings-183500582.html",
+    "published": "2026-11-19"
+   },
+   {
+    "title": "PRISM MarketView Highlights Four Small Caps Working on Alzheimer\u2019s Disease for National Alzheimer\u2019s Disease Awareness Month",
+    "publisher": "GlobeNewswire",
+    "link": "https://finance.yahoo.com/healthcare/articles/prism-marketview-highlights-four-small-170800291.html",
+    "published": "2026-11-19"
+   }
+  ],
   "HUM": [
+   {
+    "title": "Not Good: Medicare Proposes $107 Billion in Bonus Cuts. That\u2019s a Big Risk for UnitedHealth and Humana",
+    "publisher": "TIKR",
+    "link": "https://finance.yahoo.com/healthcare/articles/not-good-medicare-proposes-107-213540392.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "UnitedHealth and Humana Stocks Keep Sliding. Why They\u2019re Not Taking Part in Today\u2019s Rally.",
+    "publisher": "Barrons.com",
+    "link": "https://finance.yahoo.com/m/d0fd6d8b-d1a6-362a-bb50-f60968842e04/unitedhealth-and-humana.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Health Insurers Stocks Slide Again on Latest Medicare Proposal",
+    "publisher": "Bloomberg",
+    "link": "https://finance.yahoo.com/healthcare/articles/health-insurers-stocks-slide-again-143658768.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "UnitedHealth, Humana and CVS Shares Fall as Medicare Advantage Rating Changes Threaten $107 Billion in Payments",
+    "publisher": "InvestorsHub",
+    "link": "https://finance.yahoo.com/healthcare/articles/unitedhealth-humana-cvs-shares-fall-135537293.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Health insurer stocks slide as Medicare Advantage proposal threatens payments",
+    "publisher": "Investing.com",
+    "link": "https://finance.yahoo.com/healthcare/articles/health-insurer-stocks-slide-medicare-133027672.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "UnitedHealth Keeps Sliding on Washington\u2019s Audit Plan: Why TD Cowen Sees 34% Upside",
+    "publisher": "TIKR",
+    "link": "https://finance.yahoo.com/healthcare/articles/unitedhealth-keeps-sliding-washington-audit-071320999.html",
+    "published": "2026-11-21"
+   },
+   {
+    "title": "Bull of the Day: Humana (HUM)",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/healthcare/articles/bull-day-humana-hum-100000113.html",
+    "published": "2026-11-21"
+   },
    {
     "title": "Humana Shares Rise After TD Cowen Upgrade",
     "publisher": "MT Newswires",
     "link": "https://finance.yahoo.com/markets/stocks/articles/humana-shares-rise-td-cowen-193822409.html",
     "published": "2026-11-20"
-   },
-   {
-    "title": "TD Cowen Bets on UnitedHealth and Humana Comebacks",
-    "publisher": "GuruFocus.com",
-    "link": "https://finance.yahoo.com/healthcare/articles/td-cowen-bets-unitedhealth-humana-171434264.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "UnitedHealth and Humana Stocks Got Crushed This Week. Why They Just Got Upgrades Anyway.",
-    "publisher": "Barrons.com",
-    "link": "https://finance.yahoo.com/m/4e361fea-f763-3c5d-90f1-1b51da931f15/unitedhealth-and-humana.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "TD Cowen lifts UnitedHealth, Humana to Buy on improved earnings outlook",
-    "publisher": "Investing.com",
-    "link": "https://finance.yahoo.com/healthcare/articles/td-cowen-lifts-unitedhealth-humana-155813927.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "UnitedHealth stock pops on Buy rating, price target raise from TD Cowen",
-    "publisher": "Yahoo Finance",
-    "link": "https://finance.yahoo.com/markets/stocks/article/unitedhealth-stock-pops-on-buy-rating-best-idea-pick-at-td-cowen-153003745.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "Holding UnitedHealth At $330? Its Past Falls Mostly Healed",
-    "publisher": "Trefis",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/holding-unitedhealth-330-past-falls-151501697.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "A $6.4 Billion Hedge Fund Just Bought These 3 Stocks",
-    "publisher": "TIKR",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/6-4-billion-hedge-fund-145742275.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "Tesla upgraded, Berkshire Hathaway downgraded: Wall Street's top analyst calls",
-    "publisher": "The Fly",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/tesla-upgraded-applovin-initiated-wall-135331262.html",
-    "published": "2026-11-20"
    }
   ],
   "MET": [
+   {
+    "title": "Top Stock Reports for NVIDIA, Cisco & BHP",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/top-stock-reports-nvidia-cisco-203500498.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "DraftKings downgraded, Dollar General upgraded: Wall Street's top analyst calls",
+    "publisher": "The Fly",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/apple-upgraded-qualcomm-downgraded-wall-133634577.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Morgan Stanley Adjusts Price Target on MetLife to $120 From $111",
+    "publisher": "MT Newswires",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-adjusts-price-target-110347750.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "MetLife, Prudential and Aflac Raised Their Dividends. These 3 Insurers Offer Growing Income",
+    "publisher": "24/7 Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/metlife-prudential-aflac-raised-dividends-190756763.html",
+    "published": "2026-11-22"
+   },
    {
     "title": "Metlife Insider Sold Shares Worth $652,288, According to a Recent SEC Filing",
     "publisher": "MT Newswires",
@@ -76,33 +149,27 @@
     "publisher": "Zacks",
     "link": "https://finance.yahoo.com/real-estate/articles/metlifes-370m-real-estate-debt-151000312.html",
     "published": "2026-11-19"
-   },
-   {
-    "title": "4 Insurance Dividend Stocks to Buy in December for High Yields and Staying Power",
-    "publisher": "24/7 Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/4-insurance-dividend-stocks-buy-174755462.html",
-    "published": "2026-11-18"
-   },
-   {
-    "title": "MetLife Closes $370M Debt Fund for Transitional CRE Loans",
-    "publisher": "CRE Daily",
-    "link": "https://finance.yahoo.com/real-estate/articles/metlife-closes-370m-debt-fund-132653923.html",
-    "published": "2026-11-18"
-   },
-   {
-    "title": "MetLife (MET) Stock Still Trades Below Fair Value On Earnings Power",
-    "publisher": "Simply Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/metlife-met-stock-still-trades-111446882.html",
-    "published": "2026-11-18"
-   },
-   {
-    "title": "MetLife (MET) Dividend Declaration Keeps Its Undervalued Narrative In Focus",
-    "publisher": "Simply Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/metlife-met-dividend-declaration-keeps-100946150.html",
-    "published": "2026-11-18"
    }
   ],
   "VTRS": [
+   {
+    "title": "3 Generic Drug Stocks to Watch as Drugmakers Seek Growth in 2027",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/healthcare/articles/3-generic-drug-stocks-watch-161400104.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Scotiabank Initiates Viatris at Outperform With $25 Price Target",
+    "publisher": "MT Newswires",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/scotiabank-initiates-viatris-outperform-25-123330029.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Viatris Inc's Dividend Analysis",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/viatris-incs-dividend-analysis-100300589.html",
+    "published": "2026-11-23"
+   },
    {
     "title": "All You Need to Know About Viatris (VTRS) Rating Upgrade to Strong Buy",
     "publisher": "Zacks",
@@ -132,27 +199,15 @@
     "publisher": "MT Newswires",
     "link": "https://finance.yahoo.com/markets/stocks/articles/oppenheimer-adjusts-price-target-viatris-101840318.html",
     "published": "2026-11-18"
-   },
-   {
-    "title": "Viatris Completes Pacira Acquisition",
-    "publisher": "MT Newswires",
-    "link": "https://finance.yahoo.com/healthcare/articles/viatris-completes-pacira-acquisition-151930077.html",
-    "published": "2026-11-17"
-   },
-   {
-    "title": "Viatris Completes Acquisition of Pacira BioSciences",
-    "publisher": "PR Newswire",
-    "link": "https://finance.yahoo.com/healthcare/articles/viatris-completes-acquisition-pacira-biosciences-135000695.html",
-    "published": "2026-11-17"
-   },
-   {
-    "title": "Are Investors Undervaluing Viatris (VTRS) Right Now?",
-    "publisher": "Zacks",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/investors-undervaluing-viatris-vtrs-now-134003793.html",
-    "published": "2026-11-17"
    }
   ],
   "EG": [
+   {
+    "title": "CGI named a Leader in Everest Group's Guidewire Services PEAK Matrix\u00ae Assessment 2026",
+    "publisher": "PR Newswire",
+    "link": "https://finance.yahoo.com/technology/articles/cgi-named-leader-everest-groups-033000993.html",
+    "published": "2026-11-23"
+   },
    {
     "title": "Multiplier Named a Leader and Star Performer in Everest Group's Employer of Record (EoR) Solutions PEAK Matrix\u00ae Assessment 2026",
     "publisher": "PR Newswire",
@@ -194,15 +249,27 @@
     "publisher": "GlobeNewswire",
     "link": "https://finance.yahoo.com/technology/ai/articles/exl-recognized-leader-everest-group-182400839.html",
     "published": "2026-11-18"
-   },
-   {
-    "title": "EG Stock Near 52-Week High: A Signal for Investors to Hold Tight?",
-    "publisher": "Zacks",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/eg-stock-near-52-week-150500124.html",
-    "published": "2026-11-17"
    }
   ],
   "CPAY": [
+   {
+    "title": "UBS downgrades BILL after Corpay\u2019s $1.1B investment",
+    "publisher": "Proactive",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/ubs-downgrades-bill-corpay-1-192900874.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "BILL Holdings (BILL) Just Gave Investors a Billion-Dollar Reason to Cheer",
+    "publisher": "Insider Monkey",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/bill-holdings-bill-just-gave-043940220.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Is BILL Holdings (BILL) Fully Valued After Its $6b Go Private Deal?",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/bill-holdings-bill-fully-valued-110952400.html",
+    "published": "2026-11-21"
+   },
    {
     "title": "This Payments Stock Is a Triple Threat with Profitability, Momentum, and Robust Growth",
     "publisher": "Barchart",
@@ -232,27 +299,21 @@
     "publisher": "Payments Dive",
     "link": "https://finance.yahoo.com/markets/stocks/articles/bill-sells-6b-tpg-corpay-155400695.html",
     "published": "2026-11-20"
-   },
-   {
-    "title": "BILL to be acquired by TPG and Corpay in $6 billion all-cash deal",
-    "publisher": "Proactive",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/bill-acquired-tpg-corpay-6-153500999.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "Tesla upgraded, Berkshire Hathaway downgraded: Wall Street's top analyst calls",
-    "publisher": "The Fly",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/tesla-upgraded-applovin-initiated-wall-135331262.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "TPG, Corpay to Buy Finance Platform Bill for About $6 Billion",
-    "publisher": "The Wall Street Journal",
-    "link": "https://finance.yahoo.com/m/e1effaf5-56db-337e-aee9-0feb171792d3/tpg%2C-corpay-to-buy-finance.html",
-    "published": "2026-11-20"
    }
   ],
   "CAH": [
+   {
+    "title": "Eli Lilly vs. Vertex Pharmaceuticals: Which Healthcare Stock Is a Better Buy for 2027?",
+    "publisher": "Motley Fool",
+    "link": "https://finance.yahoo.com/healthcare/articles/eli-lilly-vs-vertex-pharmaceuticals-160102223.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Here's Why You Should Add McKesson Stock to Your Portfolio Now",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/heres-why-add-mckesson-stock-142900832.html",
+    "published": "2026-11-23"
+   },
    {
     "title": "5 High-Yield Healthcare Stocks for a Tax-Free Roth IRA Income Stream",
     "publisher": "24/7 Wall St.",
@@ -288,71 +349,65 @@
     "publisher": "Trefis",
     "link": "https://finance.yahoo.com/markets/stocks/articles/early-signs-mckesson-stocks-44-143551876.html",
     "published": "2026-11-18"
-   },
-   {
-    "title": "The Open Question In McKesson's Two New Deals",
-    "publisher": "Trefis",
-    "link": "https://finance.yahoo.com/healthcare/articles/open-mckessons-two-deals-130156812.html",
-    "published": "2026-11-18"
-   },
-   {
-    "title": "BellRing Brands Announces CFO Transition",
-    "publisher": "GlobeNewswire",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/bellring-brands-announces-cfo-transition-120100028.html",
-    "published": "2026-11-18"
    }
   ],
-  "BDX": [
+  "CRL": [
    {
-    "title": "Is Buying Edwards Stock At Its High A Bad Idea?",
-    "publisher": "Trefis",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/buying-edwards-stock-high-bad-144035994.html",
+    "title": "Charles River Stock Surges 102.3% in a Year: What's Fueling the Drive?",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/news/charles-river-stock-surges-102-165700904.html",
     "published": "2026-11-20"
    },
    {
-    "title": "Why You Should Think About Boston Scientific Differently Now",
-    "publisher": "Trefis",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/why-think-boston-scientific-differently-160801922.html",
+    "title": "Oncology Based in-Vivo CRO - Global Strategic Business Report 2026: Capitalize on the $1.7 Billion 2032 Market with Charles River, Crown Bioscience, Wuxi AppTec and Eurofins",
+    "publisher": "GlobeNewswire",
+    "link": "https://finance.yahoo.com/healthcare/articles/oncology-based-vivo-cro-global-150100778.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "Baird Adjusts Price Target on Charles River Laboratories to $365 From $364",
+    "publisher": "MT Newswires",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/baird-adjusts-price-target-charles-110353619.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "Invesco S&P 500 Equal Weight (RSP) Buys $0.6 Million More AppLovin on Nov. 17",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/invesco-p-500-equal-weight-110538799.html",
     "published": "2026-11-19"
    },
    {
-    "title": "BD Marks 85 Years of Essential Medical Device Manufacturing in Glen Falls, NY",
-    "publisher": "PR Newswire",
-    "link": "https://finance.yahoo.com/healthcare/articles/bd-marks-85-years-essential-143000847.html",
-    "published": "2026-11-19"
-   },
-   {
-    "title": "BD Named to TIME's 2027 List of America's Top Manufacturers",
-    "publisher": "PR Newswire",
-    "link": "https://finance.yahoo.com/healthcare/articles/bd-named-times-2027-list-110000672.html",
-    "published": "2026-11-19"
-   },
-   {
-    "title": "Becton, Dickinson and Company Stock Outlook: Is Wall Street Bullish or Bearish?",
-    "publisher": "Barchart",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/becton-dickinson-company-stock-outlook-142604386.html",
+    "title": "Global Preclinical CRO Services Market Opportunities and Strategies to 2035 | Capitalize on AI, Oncology and Biomarkers with Charles River, WuXi AppTec, Eurofins and Pharmaron",
+    "publisher": "GlobeNewswire",
+    "link": "https://finance.yahoo.com/healthcare/articles/global-preclinical-cro-services-market-143700134.html",
     "published": "2026-11-18"
    },
    {
-    "title": "Accelerating Organic Growth Drives Becton, Dickinson and Company\u2019s (BDX) Outperformance",
+    "title": "Charles River Laboratories International (CRL) Recovers Following Cyclical Contraction",
     "publisher": "Insider Monkey",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/accelerating-organic-growth-drives-becton-140454264.html",
+    "link": "https://finance.yahoo.com/healthcare/articles/charles-river-laboratories-international-crl-140116475.html",
     "published": "2026-11-18"
    },
    {
-    "title": "These 3 Dividend Stocks Have Crushed the Market This Year. Here\u2019s Why They Are Still Buys",
-    "publisher": "Motley Fool",
-    "link": "https://finance.yahoo.com/healthcare/articles/3-dividend-stocks-crushed-market-000002678.html",
-    "published": "2026-11-17"
+    "title": "Should You Continue to Hold Charles River Stock in Your Portfolio?",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/continue-hold-charles-river-stock-134700622.html",
+    "published": "2026-11-18"
    },
    {
-    "title": "Should You Book Profits or Hold BSX Stock Post-Q3 Earnings?",
-    "publisher": "Zacks",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/book-profits-hold-bsx-stock-140700610.html",
-    "published": "2026-11-16"
+    "title": "A $2.4 Billion Fund Dumps These 3 Stocks",
+    "publisher": "TIKR",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/2-4-billion-fund-dumps-190552274.html",
+    "published": "2026-11-17"
    }
   ],
   "SWK": [
+   {
+    "title": "Stanley Black & Decker to Present at the Goldman Sachs Industrials and Materials Conference",
+    "publisher": "PR Newswire",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/stanley-black-decker-present-goldman-210000115.html",
+    "published": "2026-11-23"
+   },
    {
     "title": "Stanley Black & Decker Just Raised Its Cash Flow Outlook. Its 59-Year Dividend Streak Looks Stronger",
     "publisher": "24/7 Wall St.",
@@ -394,12 +449,56 @@
     "publisher": "The Fly",
     "link": "https://finance.yahoo.com/markets/stocks/articles/cisco-upgraded-doximity-downgraded-wall-134558910.html",
     "published": "2026-11-17"
+   }
+  ],
+  "NUE": [
+   {
+    "title": "Zacks.com featured highlights include Progyny, Wolverine World Wide, Teradata, Nucor and ConocoPhillips",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-com-featured-highlights-progyny-122000853.html",
+    "published": "2026-11-23"
    },
    {
-    "title": "Mizuho Downgrades Stanley Black & Decker to Neutral Form In Line, Price Target is $120",
-    "publisher": "MT Newswires",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/mizuho-downgrades-stanley-black-decker-102810873.html",
-    "published": "2026-11-17"
+    "title": "Nucor Stock Outlook: Is Wall Street Bullish or Bearish?",
+    "publisher": "Barchart",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/nucor-stock-outlook-wall-street-083508570.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Steel Scrap - Global Strategic Business Report: Capitalize on 34% Volume Growth to 727.1M Tons by 2030 as Tariffs Reshape ArcelorMittal, Nucor, Gerdau and Steel Dynamics",
+    "publisher": "GlobeNewswire",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/steel-scrap-global-strategic-business-151200596.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "Are Basic Materials Stocks Lagging  ELEMENTIS (ELMTY) This Year?",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/basic-materials-stocks-lagging-elementis-134004278.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "5 Relative Price Strength Stocks to Tap Amid S&P 500 Weakness",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/5-relative-price-strength-stocks-131900017.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "Can Nucor Stock Shrug Off Its Raw Materials Slip?",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/nucor-stock-shrug-off-raw-114022783.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "Analysts Turned Bullish on These 5 Stocks on Tuesday",
+    "publisher": "Insider Monkey",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/analysts-turned-bullish-5-stocks-144213274.html",
+    "published": "2026-11-19"
+   },
+   {
+    "title": "5 Stocks Analysts Upgraded On Monday",
+    "publisher": "Insider Monkey",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/5-stocks-analysts-upgraded-monday-214321122.html",
+    "published": "2026-11-18"
    }
   ],
   "EBAY": [
@@ -452,7 +551,183 @@
     "published": "2026-11-18"
    }
   ],
+  "DAL": [
+   {
+    "title": "Coworking with Sophie Ozoux",
+    "publisher": "Marketing Brew",
+    "link": "https://finance.yahoo.com/news/coworking-sophie-ozoux-203117969.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Amex Platinum's $600 hotel credit now comes with a catch starting in 2027",
+    "publisher": "Yahoo Personal Finance",
+    "link": "https://finance.yahoo.com/personal-finance/credit-cards/article/amex-platinums-benefits-updates-2027-181143354.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Sector Update: Consumer Stocks Advance in Afternoon Trading",
+    "publisher": "MT Newswires",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/sector-consumer-stocks-advance-afternoon-183901762.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Sector Update: Consumer",
+    "publisher": "MT Newswires",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/sector-consumer-181301614.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Update: Market Chatter: Delta Air Lines Resumes Normal Operations After System Outage Delays Flights",
+    "publisher": "MT Newswires",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-delta-air-lines-162429836.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Delta Air Lines Hit by Major Outage Before Thanksgiving",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/delta-air-lines-hit-major-153805570.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "5 Stocks Stanley Druckenmiller Just Dumped\u2014and What His Big Exit Signals Next",
+    "publisher": "Insider Monkey",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/5-stocks-stanley-druckenmiller-just-151838870.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "How Southwest, Target and AT&T Finance Chiefs Think About the Human in the Loop",
+    "publisher": "The Wall Street Journal",
+    "link": "https://finance.yahoo.com/m/6c904a4c-4710-358a-8c66-4cf445a271e7/how-southwest%2C-target-and.html",
+    "published": "2026-11-23"
+   }
+  ],
+  "TXN": [
+   {
+    "title": "New Title for Huang? Fastest \u2018Boomerang\u2019",
+    "publisher": "The Wall Street Journal",
+    "link": "https://finance.yahoo.com/m/c51e9368-14ad-31d0-b2a5-96980de0e478/new-title-for-huang%3F-fastest.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Why Did Broadcom Stock Drop On Friday?",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/why-did-broadcom-stock-drop-190504586.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Why Power Integrations (POWI) Stock Is Up 11.2% Today: Chip Rally on Nvidia News",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/why-power-integrations-powi-stock-180030974.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Why Is Ambiq Micro (AMBQ) Stock Up Today? Nvidia's CEO Return Lifts Chip Stocks",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/why-ambiq-micro-ambq-stock-180029085.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Texas Instruments Stocks Jump 11.78% After Cantor Upgrade and $385 Target",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/texas-instruments-stocks-jump-11-175445342.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Texas Instruments Stock Jumps 9.8% on Cantor Fitzgerald Upgrade on Nov. 23",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/texas-instruments-stock-jumps-9-170233124.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Analog Devices Isn't Restocking. It Trades Like Nvidia Now",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/analog-devices-isnt-restocking-trades-154551913.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Metal-Oxide-Semiconductor (MOS) Microprocessor Market Global Report 2026 | Capitalize on AI, Chiplets and RISC-V as NVIDIA, Intel, Broadcom and Texas Instruments Drive 10.1% CAGR",
+    "publisher": "GlobeNewswire",
+    "link": "https://finance.yahoo.com/technology/articles/metal-oxide-semiconductor-mos-microprocessor-152800441.html",
+    "published": "2026-11-23"
+   }
+  ],
+  "BALL": [
+   {
+    "title": "Which Gives You More Of A Packaging Rebound, Smurfit WestRock Or Amcor?",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/gives-more-packaging-rebound-smurfit-190849593.html",
+    "published": "2026-11-20"
+   },
+   {
+    "title": "Do Wall Street Analysts Like Ball Corporation Stock?",
+    "publisher": "Barchart",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-ball-corporation-141313099.html",
+    "published": "2026-11-16"
+   },
+   {
+    "title": "Should You Buy Amcor Stock At This Price?",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/buy-amcor-stock-price-212817750.html",
+    "published": "2026-11-13"
+   }
+  ],
+  "ADI": [
+   {
+    "title": "Why Analog Devices Stock Is In Focus Ahead Of Results",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/why-analog-devices-stock-focus-001820584.html",
+    "published": "2026-11-24"
+   },
+   {
+    "title": "Semtech (SMTC) Q3 Earnings and Revenues Surpass Estimates",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/semtech-smtc-q3-earnings-revenues-211502996.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Why Power Integrations (POWI) Stock Is Up 11.2% Today: Chip Rally on Nvidia News",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/why-power-integrations-powi-stock-180030974.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Analog Devices Jumps 9% as Chips Rally on Nvidia's Huang Return on Nov. 23",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/analog-devices-jumps-9-chips-170157266.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Analog Devices Expected to Deliver a Solid Quarter, Ambarella to Face Memory Headwinds, Morgan Stanley Says",
+    "publisher": "MT Newswires",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/analog-devices-expected-deliver-solid-160155168.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Analog Devices Isn't Restocking. It Trades Like Nvidia Now",
+    "publisher": "Trefis",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/analog-devices-isnt-restocking-trades-154551913.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Vicor Stock Drops 36% in a Month: Should You Still Buy it on the Dip?",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/vicor-stock-drops-36-month-143400133.html",
+    "published": "2026-11-23"
+   },
+   {
+    "title": "Cantor Fitzgerald Adjusts Price Target on Analog Devices to $575 From $550",
+    "publisher": "MT Newswires",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/cantor-fitzgerald-adjusts-price-target-115418630.html",
+    "published": "2026-11-23"
+   }
+  ],
   "DRI": [
+   {
+    "title": "How Many Shares of McDonald\u2019s, Starbucks or Darden Pay $1,000 a Month in Dividends?",
+    "publisher": "TIKR",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/many-shares-mcdonald-starbucks-darden-165123271.html",
+    "published": "2026-11-21"
+   },
    {
     "title": "Darden (DRI) Stock Looks Fully Valued On Its 8% Dividend Raise",
     "publisher": "Simply Wall St.",
@@ -493,12 +768,6 @@
     "title": "CAKE's 99% Rally in 6 Months Puts Valuation in Focus: What's Next?",
     "publisher": "Zacks",
     "link": "https://finance.yahoo.com/markets/stocks/articles/cakes-99-rally-6-months-150100915.html",
-    "published": "2026-11-19"
-   },
-   {
-    "title": "What Moved Cheesecake Factory Stock?",
-    "publisher": "Trefis",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/moved-cheesecake-factory-stock-124548800.html",
     "published": "2026-11-19"
    }
   ]
