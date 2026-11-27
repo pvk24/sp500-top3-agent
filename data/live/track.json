@@ -11,7 +11,7 @@
   "returnPct": 0.79,
   "benchReturnPct": -4.74,
   "excessPct": 5.53,
-  "asOf": "2026-11-26",
+  "asOf": "2026-11-27",
   "status": "Open"
  },
  {
@@ -26,7 +26,7 @@
   "returnPct": -6.87,
   "benchReturnPct": -4.74,
   "excessPct": -2.13,
-  "asOf": "2026-11-26",
+  "asOf": "2026-11-27",
   "status": "Open"
  },
  {
@@ -41,7 +41,7 @@
   "returnPct": -2.95,
   "benchReturnPct": -4.74,
   "excessPct": 1.79,
-  "asOf": "2026-11-26",
+  "asOf": "2026-11-27",
   "status": "Open"
  }
 ]

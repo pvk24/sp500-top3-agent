@@ -1,7 +1,13 @@
 {
- "asOf": "2026-11-26",
+ "asOf": "2026-11-27",
  "items": {
   "BIIB": [
+   {
+    "title": "Neurology Clinical Trials - Global Strategic Business Report 2026: Capitalize on the Surge to $7.9 Billion by 2032 as IQVIA, ICON, Biogen, AbbVie, and Eisai Vie for Share",
+    "publisher": "GlobeNewswire",
+    "link": "https://finance.yahoo.com/healthcare/articles/neurology-clinical-trials-global-strategic-150000027.html",
+    "published": "2026-11-26"
+   },
    {
     "title": "Michael Kreppel-Friedbichler Appointed New COO of AOP Health",
     "publisher": "Business Wire",
@@ -43,15 +49,21 @@
     "publisher": "Barchart",
     "link": "https://finance.yahoo.com/healthcare/articles/wall-street-analysts-predicting-biogen-142100702.html",
     "published": "2026-11-20"
-   },
-   {
-    "title": "Clarity AD CSF Substudy Findings on Lecanemab Treatment and \u03b1-Synuclein Co-Pathology Presented at CTAD 2026",
-    "publisher": "GlobeNewswire",
-    "link": "https://finance.yahoo.com/healthcare/articles/clarity-ad-csf-substudy-findings-183500053.html",
-    "published": "2026-11-19"
    }
   ],
   "HUM": [
+   {
+    "title": "Are Medical Stocks Lagging  Adaptive Biotechnologies (ADPT) This Year?",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/medical-stocks-lagging-adaptive-biotechnologies-134004619.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Could CMS' Proposed Star Ratings Changes Slow ELV's MA Recovery?",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/healthcare/articles/could-cms-proposed-star-ratings-110600684.html",
+    "published": "2026-11-26"
+   },
    {
     "title": "Here's Why Humana Stock Deserves a Place in Your Portfolio",
     "publisher": "Zacks",
@@ -87,21 +99,27 @@
     "publisher": "MT Newswires",
     "link": "https://finance.yahoo.com/markets/stocks/articles/humana-shares-rise-keybanc-upgrade-193337961.html",
     "published": "2026-11-24"
-   },
-   {
-    "title": "What Could Humana (HUM) Cancer Care Model Mean For Patients And Costs?",
-    "publisher": "Simply Wall St.",
-    "link": "https://finance.yahoo.com/healthcare/articles/could-humana-hum-cancer-care-171854585.html",
-    "published": "2026-11-24"
-   },
-   {
-    "title": "Micron downgraded, GameStop initiated: Wall Street's top analyst calls",
-    "publisher": "The Fly",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/snap-upgraded-pinterest-downgrade-wall-135144855.html",
-    "published": "2026-11-24"
    }
   ],
   "MET": [
+   {
+    "title": "Michael Burry exits Nasdaq-100 short",
+    "publisher": "Proactive",
+    "link": "https://finance.yahoo.com/markets/options/articles/michael-burry-exits-nasdaq-100-144700682.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Michael Burry Turns Bullish, Exits Nasdaq Shorts but Eyes Nvidia at $200",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-turns-bullish-exits-113036657.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Michael Burry flips mostly long as tech stocks slide",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-flips-mostly-long-112229765.html",
+    "published": "2026-11-26"
+   },
    {
     "title": "'Big Short' Investor Michael Burry Just Closed His Bet Against the Nasdaq. Here's What Investors Should Do Now",
     "publisher": "Motley Fool",
@@ -131,27 +149,27 @@
     "publisher": "Zacks",
     "link": "https://finance.yahoo.com/markets/stocks/articles/top-stock-reports-nvidia-cisco-203500498.html",
     "published": "2026-11-23"
-   },
-   {
-    "title": "DraftKings downgraded, Dollar General upgraded: Wall Street's top analyst calls",
-    "publisher": "The Fly",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/apple-upgraded-qualcomm-downgraded-wall-133634577.html",
-    "published": "2026-11-23"
-   },
-   {
-    "title": "Morgan Stanley Adjusts Price Target on MetLife to $120 From $111",
-    "publisher": "MT Newswires",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-adjusts-price-target-110347750.html",
-    "published": "2026-11-23"
-   },
-   {
-    "title": "MetLife, Prudential and Aflac Raised Their Dividends. These 3 Insurers Offer Growing Income",
-    "publisher": "24/7 Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/metlife-prudential-aflac-raised-dividends-190756763.html",
-    "published": "2026-11-22"
    }
   ],
   "VTRS": [
+   {
+    "title": "Viatris (VTRS) Stock May Be Undervalued Following Its Pain Deal",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/healthcare/articles/viatris-vtrs-stock-may-undervalued-151103539.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "How Investors May Respond To Viatris (VTRS) Cadillac F1 Partnership",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/healthcare/articles/investors-may-respond-viatris-vtrs-081359941.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Is Viatris (VTRS) A Bargain On Its Pacira Deal And Product Pipeline?",
+    "publisher": "Simply Wall St.",
+    "link": "https://finance.yahoo.com/healthcare/articles/viatris-vtrs-bargain-pacira-deal-061842102.html",
+    "published": "2026-11-26"
+   },
    {
     "title": "Eton Pharmaceuticals (ETON) Stock Is Down 9.4% Today in Broad Market Selloff",
     "publisher": "GuruFocus.com",
@@ -181,27 +199,21 @@
     "publisher": "GuruFocus.com",
     "link": "https://finance.yahoo.com/markets/stocks/articles/viatris-incs-dividend-analysis-100300589.html",
     "published": "2026-11-23"
-   },
-   {
-    "title": "All You Need to Know About Viatris (VTRS) Rating Upgrade to Strong Buy",
-    "publisher": "Zacks",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/know-viatris-vtrs-rating-upgrade-160004016.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "Rising Sector Tide and Internal Milestones Fuel Viatris\u2019 (VTRS) Gains",
-    "publisher": "Insider Monkey",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/rising-sector-tide-internal-milestones-150508887.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "Invesco S&P 500 Equal Weight (RSP) Buys $0.6 Million More AppLovin on Nov. 17",
-    "publisher": "GuruFocus.com",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/invesco-p-500-equal-weight-110538799.html",
-    "published": "2026-11-19"
    }
   ],
   "CPAY": [
+   {
+    "title": "Corpay CEO Ron Clarke Unloads $85.3 Million of Stock Outside a 10b5-1 Plan",
+    "publisher": "24/7 Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/corpay-ceo-ron-clarke-unloads-180211032.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Corpay Stock: Is Wall Street Bullish or Bearish?",
+    "publisher": "Barchart",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/corpay-stock-wall-street-bullish-090637070.html",
+    "published": "2026-11-26"
+   },
    {
     "title": "UBS downgrades BILL after Corpay\u2019s $1.1B investment",
     "publisher": "Proactive",
@@ -237,21 +249,15 @@
     "publisher": "MT Newswires",
     "link": "https://finance.yahoo.com/markets/stocks/articles/bill-apos-acquisition-price-apos-163418955.html",
     "published": "2026-11-20"
-   },
-   {
-    "title": "Is Corpay (CPAY) A Bargain Or Fully Priced After Its BILL Deal?",
-    "publisher": "Simply Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/corpay-cpay-bargain-fully-priced-161008976.html",
-    "published": "2026-11-20"
-   },
-   {
-    "title": "Bill sells for $6B to TPG, Corpay",
-    "publisher": "Payments Dive",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/bill-sells-6b-tpg-corpay-155400695.html",
-    "published": "2026-11-20"
    }
   ],
   "CRL": [
+   {
+    "title": "Are Wall Street Analysts Predicting Charles River Laboratories Stock Will Climb or Sink?",
+    "publisher": "Barchart",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-predicting-charles-132130733.html",
+    "published": "2026-11-26"
+   },
    {
     "title": "Charles River Stock Surges 102.3% in a Year: What's Fueling the Drive?",
     "publisher": "Zacks",
@@ -293,65 +299,65 @@
     "publisher": "Zacks",
     "link": "https://finance.yahoo.com/markets/stocks/articles/continue-hold-charles-river-stock-134700622.html",
     "published": "2026-11-18"
-   },
-   {
-    "title": "A $2.4 Billion Fund Dumps These 3 Stocks",
-    "publisher": "TIKR",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/2-4-billion-fund-dumps-190552274.html",
-    "published": "2026-11-17"
    }
   ],
   "V": [
+   {
+    "title": "The Nasdaq Composite Is in a Correction, but These 3 Dividend Stocks Are Near 52-Week Highs. Here's Why They're Still Worth Buying Right Now.",
+    "publisher": "Motley Fool",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-composite-correction-3-dividend-213302973.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Billionaire Chris Hohn\u2019s TCI Has 30% of Its $49.6 Billion Stock Portfolio in GE Aerospace",
+    "publisher": "24/7 Wall St.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/billionaire-chris-hohn-tci-30-204658443.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Mastercard Stocks Rise 1.94% as Payment Networks Gain in AI Selloff Rotation",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/mastercard-stocks-rise-1-94-183721566.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Stanley Druckenmiller and 10 Other Big Funds Bought Newmont Last Quarter. Ken Fisher and 5 Others Sold. Who\u2019s Right?",
+    "publisher": "TIKR",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/stanley-druckenmiller-10-other-big-181505173.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Visa (V) Up 5.9% Since Last Earnings Report: Can It Continue?",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/visa-v-5-9-since-153019522.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Mastercard's Debia Partnership: Turning AI Discovery Into Dollars",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/technology/ai/articles/mastercards-debia-partnership-turning-ai-112200845.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "What State Street Financial Sel Sector SPDR (XLF) Bought: Berkshire Leads on Nov. 24",
+    "publisher": "GuruFocus.com",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/state-street-financial-sel-sector-110458586.html",
+    "published": "2026-11-26"
+   },
    {
     "title": "The Best Dividend Stocks to Buy With $5,000 in November",
     "publisher": "Motley Fool",
     "link": "https://finance.yahoo.com/markets/stocks/articles/best-dividend-stocks-buy-5-212102813.html",
     "published": "2026-11-25"
-   },
-   {
-    "title": "The challenge banks face in drawing consumers to AI payments",
-    "publisher": "American Banker",
-    "link": "https://finance.yahoo.com/technology/ai/articles/challenge-banks-face-drawing-consumers-173810818.html",
-    "published": "2026-11-25"
-   },
-   {
-    "title": "Mastercard Is Up 20% in a Year. Wedbush Sees Another 16%",
-    "publisher": "TIKR",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/mastercard-20-wedbush-sees-another-165716561.html",
-    "published": "2026-11-25"
-   },
-   {
-    "title": "Wedbush starts Robinhood, Coinbase at Outperform in fintech coverage launch",
-    "publisher": "Investing.com",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/wedbush-starts-robinhood-coinbase-outperform-163557118.html",
-    "published": "2026-11-25"
-   },
-   {
-    "title": "Klarna Announces Major Canada Expansion With Launch of Flexible Virtual Card",
-    "publisher": "Business Wire",
-    "link": "https://finance.yahoo.com/small-business/articles/klarna-announces-major-canada-expansion-163500879.html",
-    "published": "2026-11-25"
-   },
-   {
-    "title": "Visa Paid About $335 per Share to Buy Back $20.5 Billion of Its Stock Last Year. Would You Pay $400?",
-    "publisher": "Motley Fool",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/visa-paid-335-per-share-162802528.html",
-    "published": "2026-11-25"
-   },
-   {
-    "title": "Visa (V) Stock May Be 15% Undervalued After Swipe Fee Delay",
-    "publisher": "Simply Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/visa-v-stock-may-15-161010211.html",
-    "published": "2026-11-25"
-   },
-   {
-    "title": "Illinois fights for interchange law",
-    "publisher": "Payments Dive",
-    "link": "https://finance.yahoo.com/economy/policy/articles/illinois-fights-interchange-law-160300166.html",
-    "published": "2026-11-25"
    }
   ],
   "SWK": [
+   {
+    "title": "\u2018Businesses hate chaos\u2019: $166 billion in tariff refunds are flowing to companies, not the customers who paid",
+    "publisher": "Fortune",
+    "link": "https://finance.yahoo.com/economy/policy/articles/businesses-hate-chaos-166-billion-080300793.html",
+    "published": "2026-11-26"
+   },
    {
     "title": "Best Dividend Stocks to Buy for Dependable Dividend Growth",
     "publisher": "Kiplinger",
@@ -393,15 +399,21 @@
     "publisher": "Trefis",
     "link": "https://finance.yahoo.com/markets/stocks/articles/stanley-black-decker-stock-really-141546107.html",
     "published": "2026-11-18"
-   },
-   {
-    "title": "4 Industrial Dividend Stocks Yielding Over 3% for Retirees Who Want Rising Income",
-    "publisher": "24/7 Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/4-industrial-dividend-stocks-yielding-120054763.html",
-    "published": "2026-11-18"
    }
   ],
   "EBAY": [
+   {
+    "title": "Crosslist, a Leading Cross-listing App, Launches TikTok Shop Integration, Letting Sellers Publish Existing Listings in Minutes",
+    "publisher": "GlobeNewswire",
+    "link": "https://finance.yahoo.com/small-business/articles/crosslist-leading-cross-listing-app-164500597.html",
+    "published": "2026-11-26"
+   },
+   {
+    "title": "Buy 3 Online Retailers Ahead of Black Friday Amid Strong Expectations",
+    "publisher": "Zacks",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/buy-3-online-retailers-ahead-132000631.html",
+    "published": "2026-11-26"
+   },
    {
     "title": "eBay (EBAY) Stock Could Be 26% Undervalued After AI Toy Safety Scrutiny",
     "publisher": "Simply Wall St.",
@@ -437,18 +449,6 @@
     "publisher": "Barrons.com",
     "link": "https://finance.yahoo.com/m/6e07816c-b42f-3c3c-a0af-1340d5115da7/inside-the-pok%C3%A9mon-card.html",
     "published": "2026-11-25"
-   },
-   {
-    "title": "Jim Cramer Says GameStop\u2019s Turnaround Plan \u201cActually Works.\u201d Should You Buy?",
-    "publisher": "24/7 Wall St.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-gamestop-turnaround-000750936.html",
-    "published": "2026-11-25"
-   },
-   {
-    "title": "Needham Says GameStop Is More Than a Meme Stock Now\u2014and Sees 20% Upside",
-    "publisher": "TipRanks",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/needham-says-gamestop-more-meme-224812161.html",
-    "published": "2026-11-24"
    }
   ],
   "CSX": [
